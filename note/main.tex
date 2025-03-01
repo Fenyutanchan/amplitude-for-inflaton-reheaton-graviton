@@ -1,0 +1,68 @@
+% Copyright (c) 2025 Quan-feng WU <wuquanfeng@ihep.ac.cn>
+% 
+% This software is released under the MIT License.
+% https://opensource.org/licenses/MIT
+
+% The generated PDF is licensed under CC BY-NC-ND 4.0.
+% https://creativecommons.org/licenses/by-nc-nd/4.0/
+
+\documentclass{article}
+
+% \usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage[sorting=none, style=numeric-comp]{biblatex}
+    \addbibresource{from_inspirehep.bib}
+    \addbibresource{others.bib}
+\usepackage{fontawesome5}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[
+    colorlinks=true,
+    anchorcolor=violet,
+    citecolor=orange,
+    linkcolor=blue,
+    urlcolor=magenta
+]{hyperref}
+\usepackage[color=violet]{attachfile2}
+% \usepackage{mathrsfs}
+% \usepackage{mathtools}
+\usepackage{pgfplots}
+    \pgfplotsset{compat=1.18}
+\usepackage{physics}
+\usepackage{slashed}
+\usepackage{subcaption}
+\usepackage{tensor}
+\usepackage[compat=1.1.0]{tikz-feynhand}
+    \tikzset{graviton/.style={decorate, decoration={snake, amplitude=.4mm, segment length=1.5mm, pre length=.5mm, post length=.5mm}, double}}
+
+\input{LaTeX-commands}
+\input{math-commands}
+
+\title{Amplitude Calculation for Inflaton, Reheaton, and Graviton}
+\author{Quan-feng WU\email{wuquanfeng@ihep.ac.cn}}
+\affil{
+    Institute of High Energy Physics, Chinese Academy of Sciences, \\
+    Beijing 100049, China
+}
+\date{\today\license}
+
+\begin{document}
+    \maketitle
+
+    \begin{abstract}
+        In this Git repository\footnote{\url{https://github.com/Fenyutanchan/amplitude-for-inflaton-reheaton-graviton}}, the amplitude calculations for the inflaton, reheaton, and graviton are presented.
+        The technical details are presented in this note, and the reproducible \textsc{Wolfram Mathematica} notebooks are available in the directory of \href{URL}{\texttt{Mathematica\_notebooks/}}\footnote{All of the \textsc{Wolfram Mathematica} notebooks are licensed under the MIT License.}.
+        This note and this Git repository are the supplementary materials for the paper \TBD[arXiv:2503:xxxxx].
+        If it is helpful for your research, please cite the paper\footnote{It would be greatly appreciated if the reader cite this Git repository explicitly as well (see \href{https://github.com/Fenyutanchan/amplitude-for-inflaton-reheaton-graviton/blob/master/README.md}{README.md} for the citation information).}.
+    \end{abstract}
+    \noindent\hrulefill
+
+    \tableofcontents
+    \clearpage
+
+    
+    \clearpage
+    \printbibliography[heading=bibintoc]
+\end{document}
