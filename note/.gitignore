@@ -1,8 +1,9 @@
+*_minted*
 *.atfi
 *.aux
-*.bcf
-*.blg
 *.bbl-*
+*.bcf*
+*.blg
 *.fdb_latexmk
 *.fls
 *.log

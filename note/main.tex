@@ -17,6 +17,7 @@
 \usepackage{fontawesome5}
 \usepackage[a4paper, margin=2cm]{geometry}
 \usepackage{graphicx}
+\usepackage{minted}
 \usepackage{xcolor}
 \usepackage[
     colorlinks=true,
@@ -99,9 +100,9 @@
                     S_\mathrm{EH} = \frac{1}{2 \kappa^2} \int \dd[4]{x} \sqrt{-g} R,
                 \end{equation}
                 In this note, we only derive the triple-graviton vertex, where we use the package \textsc{xPert} to expand the perturbation of the Einstein-Hilbert action in $\order{\kappa}$ as\footnote{Notice that there are $\kappa^2$ terms in the denominator of the Lagrangian.}
-                \begin{verbatim}
+                \begin{minted}[gobble=20, breaklines]{mathematica}
                     ExpandPerturbation[Perturbed[LEH, 3] - Perturbed[LEH, 2]]
-                \end{verbatim}
+                \end{minted}
                 with $\texttt{LEH} = \sqrt{-g} \calL_{EH} = \sqrt{-g} R / (2 \kappa^2)$.
                 After some manipulations, we obtain the Feynman rule for the triple-graviton vertex as
                 \begin{equation}
@@ -130,7 +131,13 @@
                     S_{\phi + \varphi} = \int \dd[4]{x} \sqrt{-g} \qty[\calL_\phi + \calL_\varphi]
                 \end{equation}
                 is considered.
-                Same as the pure graviton vertex, the Feynman rules for the vertices of $\phi$-$\phi$-$h$ and $\varphi$-$\varphi$-$h$ are derived via the package \textsc{xPert}, which are given by
+                The Feynman rules for the vertices of $\phi$-$\phi$-$h$ and $\varphi$-$\varphi$-$h$ are derived via the package \textsc{xPert} in $\order{\kappa}$ as
+                \begin{minted}[gobble=20, breaklines]{mathematica}
+                    ExpandPerturbation[Perturbed[L\[Phi], 1] - Perturbed[L\[Phi], 0]]
+                    ExpandPerturbation[Perturbed[L\[CurlyPhi], 1] - Perturbed[L\[CurlyPhi], 0]]
+                \end{minted}
+                where $\texttt{L}\phi = \sqrt{-g} \calL_\phi$ and $\texttt{L}\varphi = \sqrt{-g} \calL_\varphi$.
+                Then the Feynman rules for the vertices of $\phi$-$\phi$-$h$ and $\varphi$-$\varphi$-$h$ read
                 \begin{equation}
                     \begin{tikzpicture}[baseline=(o)]
                         \begin{feynhand}
@@ -161,6 +168,21 @@
                     \end{tikzpicture} = -\ii \kappa \qty[p_1^\mu p_2^\nu + p_1^\nu p_2^\mu - \eta^{\mu\nu} \qty(p_1 \cdot p_2 - m_\varphi^2)].
                 \end{equation}
 
+            \subsubsection{\boldmath Vertices of \texorpdfstring{$\phi$-$\phi$-$h$-$h$}{ϕ-ϕ-h-h} and \texorpdfstring{$\varphi$-$\varphi$-$h$-$h$}{φ-φ-h-h}}
+
+                For the vertices of $\phi$-$\phi$-$h$-$h$ and $\varphi$-$\varphi$-$h$-$h$, the action of
+                \begin{equation}
+                    S_{\phi + \varphi} = \int \dd[4]{x} \sqrt{-g} \qty[\calL_\phi + \calL_\varphi]
+                \end{equation}
+                is considered.
+                The Feynman rules for the vertices of $\phi$-$\phi$-$h$-$h$ and $\varphi$-$\varphi$-$h$-$h$ are derived via the package \textsc{xPert} in $\order{\kappa^2}$ as
+                \begin{minted}[gobble=20, breaklines]{mathematica}
+                    ExpandPerturbation[Perturbed[L\[Phi], 2] - Perturbed[L\[Phi], 1]]
+                    ExpandPerturbation[Perturbed[L\[CurlyPhi], 2] - Perturbed[L\[CurlyPhi], 1]]
+                \end{minted}
+                The Feynman rules are too lengthy to be presented here but could be found in the reproducible Mathematica notebook \githubsrc[Mathematica\_notebooks/Feynman-rules-for-Vertices-via-xAct.nb].
+
+
             \subsubsection{\boldmath Vertices of \texorpdfstring{$\phi$-$\varphi$-$\varphi$}{ϕ-φ-φ}(-\texorpdfstring{$h$}{h})}
 
                 For the vertices of $\phi$-$\varphi$-$\varphi$(-$h$), the action of
@@ -168,7 +190,7 @@
                     S_{\phi\varphi^2} = \int \dd[4]{x} \sqrt{-g} \calL_{\phi\varphi^2}
                 \end{equation}
                 is considered.
-                Same as the previous vertices, the Feynman rules for the vertices of $\phi$-$\varphi$-$\varphi$(-$h$) are derived via the package \textsc{xPert}, which are given by
+                The Feynman rules for the vertices of $\phi$-$\varphi$-$\varphi$(-$h$) are derived via the package \textsc{xPert}, which are given by
                 \begin{equation}
                     \begin{tikzpicture}[baseline=(o)]
                         \begin{feynhand}
@@ -301,33 +323,212 @@
             We do not discuss the details of the polarization tensors here but refer to Ref.~\cite[Sec.~2.2]{Basile:2024oms} for details.
             However, we are interested in the summation over the helicities as \cite[Eq.~(A.6)]{Barman:2023ymn}
             \begin{equation}
-                \sum_{h = \pm 2} \varepsilon_{\mu\nu}(\vb{p}, h) \varepsilon_{\rho\sigma}^*(\vb{p}, h) = \frac{1}{2} \qty(\bar{\eta}_{\mu\rho} \bar{\eta}_{\nu\sigma} + \bar{\eta}_{\mu\sigma} \bar{\eta}_{\nu\rho} - \bar{\eta}_{\mu\nu} \bar{\eta}_{\rho\sigma}),
+                P_{\mu\nu, \rho\sigma} := \sum_{h = \pm 2} \varepsilon_{\mu\nu}(\vb{p}, h) \varepsilon_{\rho\sigma}^*(\vb{p}, h) = \frac{1}{2} \qty(\bar{\eta}_{\mu\rho} \bar{\eta}_{\nu\sigma} + \bar{\eta}_{\mu\sigma} \bar{\eta}_{\nu\rho} - \bar{\eta}_{\mu\nu} \bar{\eta}_{\rho\sigma}),
             \end{equation}
             where
             \begin{equation}
                 \bar{\eta}_{\mu\nu} = \eta_{\mu\nu} - \frac{p_\mu r_\nu + r_\mu p_\nu}{p \cdot r}
             \end{equation}
             with $r^\mu$ being an arbitrary null vector for reference.
+            Notice that
+            \begin{equation}
+                q^\alpha P_{\mu\nu, \rho\sigma} \equiv 0 \qfor q = p, r \qand \alpha = \mu, \nu, \rho, \sigma
+                \label{eq:transverse-condition}
+            \end{equation}
+            and
+            \begin{equation}
+                g^{\mu\nu} P_{\mu\nu, \rho\sigma} = g^{\rho\sigma} P_{\mu\nu, \rho\sigma} = 0,
+                \label{eq:traceless-condition}
+            \end{equation}
+            which means the polarization tensors are transverse and traceless as expected.
 
     \section{Amplitudes}
 
         With the Feynman rules we have derived, we could calculate the amplitudes for the processes of interest, where the package \textsc{FeynCalc} \cite{Mertig:1990an, Shtabovenko:2016sxi, Shtabovenko:2020gxv, Shtabovenko:2023idz} is applied.
+        In \githubsrc[Mathematica\_notebooks/FeynmanRules.m], the generated Feynman rules are automatically loaded for the calculation of the amplitudes in the following sections.
 
         \paragraph{Important Note:}
         In \textsc{FeynCalc}, the metric signature is $-2$ instead of $+2$.
         The Feynman rules derived in the previous section should be modified accordingly:
-        \begin{verbatim}
+        \begin{minted}[gobble=12, breaklines]{mathematica}
             outputRule = {
-                ph1[a_] -> FV[ph1, a], ph2[a_] -> FV[ph2, a],
-                ph3[a_] -> FV[ph3, a], p\[Phi]1[a_] -> FV[p\[Phi]1, a], 
-                p\[Phi]2[a_] -> FV[p\[Phi]2, a], 
-                p\[CurlyPhi]1[a_] -> FV[p\[CurlyPhi]1, a], 
-                p\[CurlyPhi]2[a_] -> FV[p\[CurlyPhi]2, a], \[Eta][a_, b_] -> -MT[a, b], 
-                FV[p1_, a_] FV[p2_, -a_] -> -SP[p1, p2]
-            } // HoldForm
-        \end{verbatim}
+                ph1[a_] -> FV[ph1, a], ph2[a_] -> FV[ph2, a], ph3[a_] -> FV[ph3, a],
 
-        
+                p\[Phi]1[a_] -> FV[p\[Phi]1, a], p\[Phi]2[a_] -> FV[p\[Phi]2, a],
+
+                p\[CurlyPhi]1[a_] -> FV[p\[CurlyPhi]1, a],
+                p\[CurlyPhi]2[a_] -> FV[p\[CurlyPhi]2, a],
+
+                \[Eta][a_, b_] -> -MT[a, b], FV[p1_, a_] FV[p2_, -a_] -> -SP[p1, p2]
+            } // HoldForm;
+        \end{minted}
+
+        \subsection{\boldmath \texorpdfstring{$\phi \to \varphi \varphi$}{inflaton → reheaton + reheaton}}
+
+            For the process of $\phi(p) \to \varphi(k_1) + \varphi(k_2)$, the Feynman diagram and the corresponding amplitude are given by
+            \begin{equation}
+                \begin{tikzpicture}[baseline=(phi-varphi-varphi)]
+                    \begin{feynhand}
+                        \vertex (phi) at (-1.5, 0) {$\phi$};
+                        \vertex (varphi1) at (1.5, 1) {$\varphi$};
+                        \vertex (varphi2) at (1.5, -1) {$\varphi$};
+                        \vertex (phi-varphi-varphi) at (0, 0);
+
+                        \propag [mom=$p$] (phi) to (phi-varphi-varphi);
+                        \propag [sca, mom=$k_1$] (phi-varphi-varphi) to (varphi1);
+                        \propag [sca, mom'=$k_2$] (phi-varphi-varphi) to (varphi2);
+                    \end{feynhand}
+                \end{tikzpicture} = \ii \lambda,
+            \end{equation}
+            The norm squared of the amplitude with the summation over the spins/helicities of final states and the average over the spins/helicities of initial states is then
+            \begin{equation}
+                \barMsqr[\phi \to \varphi \varphi] = \lambda^2.
+            \end{equation}
+            Therefore, the decay width of $\phi \to \varphi \varphi$ is given by \cite[Eq.~(49.18)]{ParticleDataGroup:2024cfk}
+            \begin{equation}
+                \begin{aligned}
+                    \Gamma_{\phi \to \varphi \varphi} & = \frac{1}{2 m_\phi} \int \tildedp{k_1} ~ \tildedp{k_2} ~ \twopidelta[4]{p - k_1 - k_2} \frac{\barMsqr[\phi \to \varphi \varphi]}{2} \\
+                    & = \frac{\lambda^2}{32 \pi m_\phi^2} \sqrt{m_\phi^2 - 4 m_\varphi^2},
+                \end{aligned}
+            \end{equation}
+            where the factor $1/2$ is due to the identical particles in the final state.
+            If $m_\varphi \to 0$, we have
+            \begin{equation}
+                \Gamma_{\phi \to \varphi \varphi} = \frac{\lambda^2}{32 \pi m_\phi}.
+            \end{equation}
+
+        \subsection{\texorpdfstring{\boldmath $\phi + \phi \to h_{\mu\nu} + h_{\rho\sigma}$}{ϕ + ϕ → h\_{µν} + h\_{ρσ}}}
+
+            For the process of $\phi(p_1) + \phi(p_2) \to h_{\mu\nu}(k_1) + h_{\rho\sigma}(k_2)$, the corresponding Feynman diagrams are shown in Fig.~\ref{fig:phi-phi-to-h-h}.
+
+            \begin{figure}[h]
+                \centering
+                \begin{tikzpicture}
+                    \begin{feynhand}
+                        \vertex (phi-1) at (-1.5, 1) {$\phi$};
+                        \vertex (phi-2) at (-1.5, -1) {$\phi$};
+                        \vertex (phi-phi-h-1) at (0, 1);
+                        \vertex (phi-phi-h-2) at (0, -1);
+                        \vertex (h1) at (1.5, 1) {$h_{\mu\nu}$};
+                        \vertex (h2) at (1.5, -1) {$h_{\rho\sigma}$};
+
+                        \propag [scalar, blue, mom=\textcolor{black}{$p_1$}] (phi-1) to (phi-phi-h-1);
+                        \propag [scalar, blue, mom=\textcolor{black}{$p_2$}] (phi-2) to (phi-phi-h-2);
+                        \propag [scalar, blue, mom=\textcolor{black}{$p_1 - k_1$}] (phi-phi-h-1) to (phi-phi-h-2);
+                        \propag [graviton] (phi-phi-h-1) to (h1);
+                        \propag [opacity=0, mom=$k_1$] (phi-phi-h-1) to (h1);
+                        \propag [graviton] (phi-phi-h-2) to (h2);
+                        \propag [opacity=0, mom=$k_2$] (phi-phi-h-2) to (h2);
+                    \end{feynhand}
+                \end{tikzpicture}
+                \begin{tikzpicture}
+                    \begin{feynhand}
+                        \vertex (phi-1) at (-1.5, 1) {$\phi$};
+                        \vertex (phi-2) at (-1.5, -1) {$\phi$};
+                        \vertex (phi-phi-h-1) at (0, 1);
+                        \vertex (phi-phi-h-2) at (0, -1);
+                        \vertex (h1) at (1.5, -1) {$h_{\mu\nu}$};
+                        \vertex (h2) at (1.5, 1) {$h_{\rho\sigma}$};
+
+                        \propag [scalar, blue, mom=\textcolor{black}{$p_1$}] (phi-1) to (phi-phi-h-1);
+                        \propag [scalar, blue, mom=\textcolor{black}{$p_2$}] (phi-2) to (phi-phi-h-2);
+                        \propag [scalar, blue, mom=\textcolor{black}{$p_1 - k_2$}] (phi-phi-h-1) to (phi-phi-h-2);
+                        \propag [graviton] (phi-phi-h-2) to (h1);
+                        \propag [opacity=0, mom=$k_1$] (phi-phi-h-2) to (h1);
+                        \propag [graviton] (phi-phi-h-1) to (h2);
+                        \propag [opacity=0, mom=$k_2$] (phi-phi-h-1) to (h2);
+                    \end{feynhand}
+                \end{tikzpicture}
+                \begin{tikzpicture}
+                    \begin{feynhand}
+                        \vertex (phi-1) at (-1.5, 1) {$\phi$};
+                        \vertex (phi-2) at (-1.5, -1) {$\phi$};
+                        \vertex (phi-phi-h) at (-.5, 0);
+                        \vertex (h-h-h) at (.5, 0);
+                        \vertex (h1) at (1.5, 1) {$h_{\mu\nu}$};
+                        \vertex (h2) at (1.5, -1) {$h_{\rho\sigma}$};
+
+                        \propag [scalar, blue, mom=\textcolor{black}{$p_1$}] (phi-1) to (phi-phi-h);
+                        \propag [scalar, blue, mom=\textcolor{black}{$p_2$}] (phi-2) to (phi-phi-h);
+                        \propag [graviton] (phi-phi-h) to (h-h-h);
+                        \propag [opacity=0, mom'=$p_1 + p_2$] (phi-phi-h) to (h-h-h);
+                        \propag [graviton] (h-h-h) to (h1);
+                        \propag [opacity=0, mom=$k_1$] (h-h-h) to (h1);
+                        \propag [graviton] (h-h-h) to (h2);
+                        \propag [opacity=0, mom=$k_2$] (h-h-h) to (h2);
+                    \end{feynhand}
+                \end{tikzpicture}
+                \begin{tikzpicture}
+                    \begin{feynhand}
+                        \vertex (phi-1) at (-1.5, 1) {$\phi$};
+                        \vertex (phi-2) at (-1.5, -1) {$\phi$};
+                        \vertex (phi-phi-h-h) at (0, 0);
+                        \vertex (h1) at (1.5, 1) {$h_{\mu\nu}$};
+                        \vertex (h2) at (1.5, -1) {$h_{\rho\sigma}$};
+
+                        \propag [scalar, blue, mom=\textcolor{black}{$p_1$}] (phi-1) to (phi-phi-h-h);
+                        \propag [scalar, blue, mom=\textcolor{black}{$p_2$}] (phi-2) to (phi-phi-h-h);
+                        \propag [graviton] (phi-phi-h-h) to (h1);
+                        \propag [opacity=0, mom'=$k_1$] (phi-phi-h-h) to (h1);
+                        \propag [graviton] (phi-phi-h-h) to (h2);
+                        \propag [opacity=0, mom'=$k_2$] (phi-phi-h-h) to (h2);
+                    \end{feynhand}
+                \end{tikzpicture}
+                \caption{Feynman diagrams for $\phi(p_1) + \phi(p_2) \to h_{\mu\nu}(k_1) + h_{\rho\sigma}(k_2)$: $t$-, $u$-, $s$-, and contact channels.}
+                \label{fig:phi-phi-to-h-h}
+            \end{figure}
+
+            The corresponding amplitudes are calculated in \githubsrc[Mathematica\_notebooks/phi-phi-to-h-h.nb].
+            Since the $P_{\mu\nu, \rho\sigma}$ is TT as shown in Eqs.~\eqref{eq:transverse-condition} and \eqref{eq:traceless-condition}, we could make the replacements to simplify the calculations, which are given by
+            \begin{equation}
+                    k_i \to 0, \qquad p_2 \to -p_1, \qquad \eta_{\mu\nu} \to 0, \qquad \eta_{\rho\sigma} \to 0.
+            \end{equation}
+            In the \textsc{Wolfram Mathematica} notebook, the \texttt{magicRule} consists of the replacements, which reads
+            \begin{minted}[gobble=16, breaklines]{mathematica}
+                magicRule = {FV[k1, _] -> 0, FV[k2, _] -> 0, MT[\[Mu], \[Nu]] -> 0, 
+                    MT[\[Rho], \[Sigma]] -> 0, MT[\[Mu]C, \[Nu]C] -> 0, 
+                    MT[\[Rho]C, \[Sigma]C] -> 0, FV[p2, \[Mu]_] -> -FV[p1, \[Mu]]};
+            \end{minted}
+            Therefore, the amplitudes are simplified to
+            \begin{align}
+                \iM[t] & \simeq -\frac{4 \ii \kappa^2}{t - m_\phi^2} p_1^\mu p_1^\nu p_1^\rho p_1^\sigma, \\
+                \iM[u] & \simeq -\frac{4 \ii \kappa^2}{u - m_\phi^2} p_1^\mu p_1^\nu p_1^\rho p_1^\sigma, \\
+                \iM[s] & \simeq \cdots, \\
+                \iM[4] & \simeq \cdots,
+            \end{align}
+            where the expressions for $\iM[s]$ and $\iM[4]$ are too lengthy to be presented here.
+            Please refer to the \textsc{Wolfram Mathematica} notebook for details.
+            The norm squared of the amplitudes with the summation over the spins/helicities of all external particles is then
+            \begin{equation}
+                \sumMsqr[\phi + \phi \to h + h] = \frac{2 \kappa^2}{s^2 \qty(t - m_\phi^2)^2 \qty(s + t - m_\phi^2)^2} \qty[
+                    \begin{aligned}
+                        m_\phi^{16} - 8 m_\phi^{14} t - 8 m_\phi^2 t^4 (s + t)^3 + t^4 (s + t)^4 \\
+                        {} + 4 m_\phi^{12} t (s + 7 t) + 4 m_\phi^4 t^3 (s + t)^2 (s + 7 t) \\
+                        {} - 8 m_\phi^{10} t^2 (3 s + 7 t) - 8 m_\phi^6 t^3 (s + t) (3 s + 7 t) \\
+                        {} + m_\phi^8 \qty(s^4 + 6 s^2 t^2 + 60 s t^3 + 70 t^4)
+                    \end{aligned}
+                ].
+            \end{equation}
+            This lengthy expression could be simplified by considering the non-relativistic (NR) limit or the ultra-relativistic (UR) limit.
+
+            For the NR limit, we have
+            \begin{equation}
+                s \to 4 m_\phi^2, \qquad t \to -m_\phi^2, \qand u \to -m_\phi^2,
+            \end{equation}
+            which leads to $\calM_t \calM_i^* = \calM_i^* \calM_t = \calM_u \calM_i^* = \calM_i^* \calM_u = 0$ for $i$ being $t$, $u$, $s$ or $4$.
+            The non-vanishing terms are
+            \begin{align}
+                \Msqr[s] & = 18 \kappa^4 m_\phi^4, \\
+                \Msqr[4] & = 32 \kappa^4 m_\phi^4, \\
+                \calM_s \calM_4^* + \calM_4 \calM_s^* & = -48 \kappa^4 m_\phi^4,
+            \end{align}
+            which are consistent with Eq.~(A3) of Ref.~\cite{Choi:2024ilx}.
+
+            In the UR limit, we have $m_\phi \to 0$, which leads to
+            \begin{equation}
+                \sumMsqr[\phi + \phi \to h + h] = \frac{2 \kappa^2 t^2 u^2}{s^2},
+            \end{equation}
+            which is consistent with Eq.~(25) of Ref.~\cite{Ghiglieri:2022rfp}\footnote{Notice that $\kappa = \MPl^{-1}$ in this note, while $\kappa = 2 \MPl^{-1}$ in Ref.~\cite{Ghiglieri:2022rfp}.}.
     
     \clearpage
     \appendix

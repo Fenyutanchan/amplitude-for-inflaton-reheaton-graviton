@@ -6,13 +6,10 @@
 \DeclareDocumentCommand{\twopidelta}{om}{\IfNoValueTF{#1}{\twopi[] \diracdelta}{\twopi[#1] \diracdelta[#1]} \qty(#2)}
 
 \DeclareDocumentCommand{\iM}{o}{\IfNoValueTF{#1}{\ii \calM}{\ii \calM_{#1}}}
-\DeclareDocumentCommand{\Msqr}{o}{\IfNoValueTF{#1}{\overline{\abs{\calM}^2}}{\overline{\abs{\calM_{#1}}^2}}}
+\DeclareDocumentCommand{\Msqr}{o}{\IfNoValueTF{#1}{\abs{\calM}^2}{\abs{\calM_{#1}}^2}}
+\DeclareDocumentCommand{\barMsqr}{o}{\IfNoValueTF{#1}{\overline{\abs{\calM}^2}}{\overline{\abs{\calM_{#1}}^2}}}
+\DeclareDocumentCommand{\sumMsqr}{o}{\IfNoValueTF{#1}{\sum \abs{\calM}^2}{\sum \abs{\calM_{#1}}^2}}
 
-
-% \newcommand{\iM}{\ii \calM}
-% \newcommand{\Msqr}{\overline{\abs{\calM}^2}}
-
-\DeclareMathOperator{\artanh}{artanh}
 \DeclareMathOperator{\diag}{diag}
 
 \newcommand{\GF}{G_\mathrm{F}}

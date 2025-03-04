@@ -470,37 +470,6 @@
       \verb 2312.14089
       \endverb
     \endentry
-    \entry{Carroll:2004st}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=a21efd7d6f43a778b4bd8bd5cf50c950}{%
-           family={Carroll},
-           familyi={C\bibinitperiod},
-           given={Sean\bibnamedelima M.},
-           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
-      \strng{fullhash}{a21efd7d6f43a778b4bd8bd5cf50c950}
-      \strng{fullhashraw}{a21efd7d6f43a778b4bd8bd5cf50c950}
-      \strng{bibnamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
-      \strng{authorbibnamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
-      \strng{authornamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
-      \strng{authorfullhash}{a21efd7d6f43a778b4bd8bd5cf50c950}
-      \strng{authorfullhashraw}{a21efd7d6f43a778b4bd8bd5cf50c950}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-0-8053-8732-2, 978-1-108-48839-6, 978-1-108-77555-7}
-      \field{month}{7}
-      \field{title}{{Spacetime and Geometry}: {An Introduction to General Relativity}}
-      \field{year}{2019}
-      \verb{doi}
-      \verb 10.1017/9781108770385
-      \endverb
-    \endentry
     \entry{ParticleDataGroup:2024cfk}{article}{}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -532,6 +501,129 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1103/PhysRevD.110.030001
+      \endverb
+    \endentry
+    \entry{Choi:2024ilx}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5daff74586282cb05fb49600743a6fbd}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Gongjun},
+           giveni={G\bibinitperiod}}}%
+        {{hash=368f0354cf207bf373a638d2f3b7cd56}{%
+           family={Ke},
+           familyi={K\bibinitperiod},
+           given={Wenqi},
+           giveni={W\bibinitperiod}}}%
+        {{hash=7c44adda5d52fac3ab61888d1c95c4c6}{%
+           family={Olive},
+           familyi={O\bibinitperiod},
+           given={Keith\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{61638dc0c0c83481ace5a544c65fa04d}
+      \strng{fullhash}{61638dc0c0c83481ace5a544c65fa04d}
+      \strng{fullhashraw}{61638dc0c0c83481ace5a544c65fa04d}
+      \strng{bibnamehash}{61638dc0c0c83481ace5a544c65fa04d}
+      \strng{authorbibnamehash}{61638dc0c0c83481ace5a544c65fa04d}
+      \strng{authornamehash}{61638dc0c0c83481ace5a544c65fa04d}
+      \strng{authorfullhash}{61638dc0c0c83481ace5a544c65fa04d}
+      \strng{authorfullhashraw}{61638dc0c0c83481ace5a544c65fa04d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{number}{8}
+      \field{title}{{Minimal production of prompt gravitational waves during reheating}}
+      \field{volume}{109}
+      \field{year}{2024}
+      \field{pages}{083516}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.109.083516
+      \endverb
+      \verb{eprint}
+      \verb 2402.04310
+      \endverb
+    \endentry
+    \entry{Ghiglieri:2022rfp}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=8244a820f3f3b7ba5ee33c15bb19d21e}{%
+           family={Ghiglieri},
+           familyi={G\bibinitperiod},
+           given={Jacopo},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4c3b9925a39b08de56dafd1c4c1e63a7}{%
+           family={Schütte-Engel},
+           familyi={S\bibinithyphendelim E\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7f0d48193352f04a6e532922cdb9578a}{%
+           family={Speranza},
+           familyi={S\bibinitperiod},
+           given={Enrico},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{786b318b94990253e93fbed2845ac905}
+      \strng{fullhash}{786b318b94990253e93fbed2845ac905}
+      \strng{fullhashraw}{786b318b94990253e93fbed2845ac905}
+      \strng{bibnamehash}{786b318b94990253e93fbed2845ac905}
+      \strng{authorbibnamehash}{786b318b94990253e93fbed2845ac905}
+      \strng{authornamehash}{786b318b94990253e93fbed2845ac905}
+      \strng{authorfullhash}{786b318b94990253e93fbed2845ac905}
+      \strng{authorfullhashraw}{786b318b94990253e93fbed2845ac905}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{number}{2}
+      \field{title}{{Freezing-in gravitational waves}}
+      \field{volume}{109}
+      \field{year}{2024}
+      \field{pages}{023538}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.109.023538
+      \endverb
+      \verb{eprint}
+      \verb 2211.16513
+      \endverb
+    \endentry
+    \entry{Carroll:2004st}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a21efd7d6f43a778b4bd8bd5cf50c950}{%
+           family={Carroll},
+           familyi={C\bibinitperiod},
+           given={Sean\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{fullhash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{fullhashraw}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{bibnamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authorbibnamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authornamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authorfullhash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authorfullhashraw}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-8053-8732-2, 978-1-108-48839-6, 978-1-108-77555-7}
+      \field{month}{7}
+      \field{title}{{Spacetime and Geometry}: {An Introduction to General Relativity}}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1017/9781108770385
       \endverb
     \endentry
     \entry{Misner:1973prb}{book}{}{}
