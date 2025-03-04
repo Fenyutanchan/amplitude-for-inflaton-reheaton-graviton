@@ -98,7 +98,7 @@
                 \begin{equation}
                     S_\mathrm{EH} = \frac{1}{2 \kappa^2} \int \dd[4]{x} \sqrt{-g} R,
                 \end{equation}
-                In this note, we only derive the triple-graviton vertex, where we use the package \textsc{xPert} to expand the perturbation of the Einstein-Hilbert action in $\order{\kappa}$ as\footnote{Notice that there are $\kappa^2$ terms in the denominator of the Lagrangian.}
+                In this note, we only derive the triple-graviton vertex, where we use the package \textsc{xPert} to expand the perturbation of the Einstein-Hilbert action in $\order{\kappa}$ as\footnote{Notice that there is a $\kappa^2$ in the denominator of the Lagrangian.}
                 \begin{minted}[gobble=20, breaklines]{mathematica}
                     ExpandPerturbation[Perturbed[LEH, 3] - Perturbed[LEH, 2]]
                 \end{minted}
@@ -119,7 +119,8 @@
                             \propag [graviton] (o) to (h3);
                             \propag [mom = $p_3$, opacity=0] (o) to (h3);
                         \end{feynhand}
-                    \end{tikzpicture} = \ii V_{{(\mu\nu)(\rho\sigma)(\alpha\beta)}}(p_1, p_2, p_3).
+                    \end{tikzpicture} = \ii V_{{(\mu\nu)(\rho\sigma)(\alpha\beta)}}^{(3h)}(p_1, p_2, p_3).
+                    \label{eq:vertex-hhh}
                 \end{equation}
                 The corresponding expression is too lengthy to be presented here, but it could be found in the reproducible Mathematica notebook \githubsrc[Mathematica\_notebooks/Feynman-rules-for-Vertices-via-xAct.nb].
 
@@ -150,6 +151,7 @@
                             \propag [graviton] (o) to (h);
                         \end{feynhand}
                     \end{tikzpicture} = -\ii \kappa \qty[p_1^\mu p_2^\nu + p_1^\nu p_2^\mu - \eta^{\mu\nu} \qty(p_1 \cdot p_2 - m_\phi^2)],
+                    \label{eq:vertex-phi-phi-h}
                 \end{equation}
                 and
                 \begin{equation}
@@ -165,6 +167,7 @@
                             \propag [graviton] (o) to (h);
                         \end{feynhand}
                     \end{tikzpicture} = -\ii \kappa \qty[p_1^\mu p_2^\nu + p_1^\nu p_2^\mu - \eta^{\mu\nu} \qty(p_1 \cdot p_2 - m_\varphi^2)].
+                    \label{eq:vertex-varphi-varphi-h}
                 \end{equation}
 
             \subsubsection{\boldmath Vertices of \texorpdfstring{$\phi$-$\phi$-$h$-$h$}{ϕ-ϕ-h-h} and \texorpdfstring{$\varphi$-$\varphi$-$h$-$h$}{φ-φ-h-h}}
@@ -179,8 +182,25 @@
                     ExpandPerturbation[Perturbed[L\[Phi], 2] - Perturbed[L\[Phi], 1]]
                     ExpandPerturbation[Perturbed[L\[CurlyPhi], 2] - Perturbed[L\[CurlyPhi], 1]]
                 \end{minted}
-                The Feynman rules are too lengthy to be presented here but could be found in the reproducible Mathematica notebook \githubsrc[Mathematica\_notebooks/Feynman-rules-for-Vertices-via-xAct.nb].
+                The Feynman rules are then
+                \begin{equation}
+                    \begin{tikzpicture}[baseline=(o)]
+                        \begin{feynhand}
+                            \vertex (o) at (0, 0);
+                            \vertex (phi1) at (-1, 1) {\textcolor{blue}{$\phi$}/\textcolor{red}{$\varphi$}};
+                            \vertex (phi2) at (-1, -1) {\textcolor{blue}{$\phi$}/\textcolor{red}{$\varphi$}};
+                            \vertex (h1) at (1, 1) {$h_{\mu\nu}$};
+                            \vertex (h2) at (1, -1) {$h_{\rho\sigma}$};
 
+                            \propag [scalar, mom=$p_1$] (o) to (phi1);
+                            \propag [scalar, mom=$p_2$] (o) to (phi2);
+                            \propag [graviton] (o) to (h1);
+                            \propag [graviton] (o) to (h2);
+                        \end{feynhand}
+                    \end{tikzpicture} = \ii V_{(\mu\nu)(\rho\sigma)}^{(sshh)}\qty(p_1, p_2, m_{\phi/\varphi}),
+                    \label{eq:vertex-s-s-h-h}
+                \end{equation}
+                whose expressions are too lengthy to be presented here but could be found in the reproducible Mathematica notebook \githubsrc[Mathematica\_notebooks/Feynman-rules-for-Vertices-via-xAct.nb].
 
             \subsubsection{\boldmath Vertices of \texorpdfstring{$\phi$-$\varphi$-$\varphi$}{ϕ-φ-φ}(-\texorpdfstring{$h$}{h})}
 
@@ -203,6 +223,7 @@
                             \propag [scalar, red] (o) to (varphi2);
                         \end{feynhand}
                     \end{tikzpicture} = \ii \lambda,
+                    \label{eq:vertex-phi-varphi-varphi}
                 \end{equation}
                 and
                 \begin{equation}
@@ -220,6 +241,7 @@
                             \propag [graviton] (o) to (h);
                         \end{feynhand}
                     \end{tikzpicture} = \ii \kappa \lambda \eta_{\mu\nu}.
+                    \label{eq:vertex-phi-varphi-varphi-h}
                 \end{equation}
 
         \subsection{Propagators and External Legs}
@@ -242,6 +264,7 @@
                         \draw (phi2-1) -- (phi2) -- (phi2-2);
                     \end{feynhand}
                 \end{tikzpicture} = \frac{-\ii}{p^2 + m_\phi^2 - \ii 0^+},
+                \label{eq:propagator-phi}
             \end{equation}
             and
             \begin{equation}
@@ -260,6 +283,7 @@
                         \draw (phi2-1) -- (phi2) -- (phi2-2);
                     \end{feynhand}
                 \end{tikzpicture} = \frac{-\ii}{p^2 + m_\varphi^2 - \ii 0^+}.
+                \label{eq:propagator-varphi}
             \end{equation}
             The external legs for scalar fields are always $1$ \cite[Sec.~10]{Srednicki:2007qs}.
 
@@ -284,6 +308,7 @@
                         \draw (h2-1) -- (h2) -- (h2-2);
                     \end{feynhand}
                 \end{tikzpicture} = \frac{1}{2} \frac{-\ii}{p^2 - \ii 0^+} \qty(\eta_{\mu\rho} \eta_{\nu\sigma} + \eta_{\mu\sigma} \eta_{\nu\rho} - \eta_{\mu\nu} \eta_{\rho\sigma}).
+                \label{eq:propagator-graviton}
             \end{equation}
             The external legs for the graviton are given by
             \begin{equation}
@@ -323,10 +348,12 @@
             However, we are interested in the summation over the helicities as \cite[Eq.~(A.6)]{Barman:2023ymn}
             \begin{equation}
                 P_{\mu\nu, \rho\sigma} := \sum_{h = \pm 2} \varepsilon_{\mu\nu}(\vb{p}, h) \varepsilon_{\rho\sigma}^*(\vb{p}, h) = \frac{1}{2} \qty(\bar{\eta}_{\mu\rho} \bar{\eta}_{\nu\sigma} + \bar{\eta}_{\mu\sigma} \bar{\eta}_{\nu\rho} - \bar{\eta}_{\mu\nu} \bar{\eta}_{\rho\sigma}),
+                \label{eq:sum-pol}
             \end{equation}
             where
             \begin{equation}
                 \bar{\eta}_{\mu\nu} = \eta_{\mu\nu} - \frac{p_\mu r_\nu + r_\mu p_\nu}{p \cdot r}
+                \label{eq:eta-bar}
             \end{equation}
             with $r^\mu$ being an arbitrary null vector for reference.
             Notice that
@@ -341,26 +368,53 @@
             \end{equation}
             which means the polarization tensors are transverse and traceless as expected.
 
+        \subsection{Script to Collcet Feynman Rules}
+
+            The vertices generated in \githubsrc[Mathematica\_notebooks/Feynman-rules-for-Vertices-via-xAct.nb] are exported to the as the \texttt{*.m} files in the directory \githubsrc[Mathematica\_notebooks/data/].
+            Since we will use the \textsc{FeynCalc} package \cite{Mertig:1990an, Shtabovenko:2016sxi, Shtabovenko:2020gxv, Shtabovenko:2023idz} to generate and manipulate the amplitudes, some modifications are needed for the Feynman rules.
+            In \textsc{FeynCalc}, the metric signature is $-2$ instead of $+2$, so we need to modify the Feynman rules accordingly:
+            \begin{minted}[gobble=16, breaklines]{mathematica}
+                outputRule = {
+                    ph1[a_] -> FV[ph1, a], ph2[a_] -> FV[ph2, a], ph3[a_] -> FV[ph3, a],
+    
+                    p\[Phi]1[a_] -> FV[p\[Phi]1, a], p\[Phi]2[a_] -> FV[p\[Phi]2, a],
+    
+                    p\[CurlyPhi]1[a_] -> FV[p\[CurlyPhi]1, a],
+                    p\[CurlyPhi]2[a_] -> FV[p\[CurlyPhi]2, a],
+    
+                    \[Eta][a_, b_] -> -MT[a, b], FV[p1_, a_] FV[p2_, -a_] -> -SP[p1, p2]
+                } // HoldForm;
+            \end{minted}
+
+            Then the script \githubsrc[Mathematica\_notebooks/FeynmanRules.m] will invoke the package \textsc{FeynCalc} package and collect all the Feynman rules in \texttt{.m} files automatically by
+            \begin{minted}[gobble=16, breaklines]{mathematica}
+                Get["/path/to/FeynmanRules.m"];
+            \end{minted}
+            The functions defined in \githubsrc[Mathematica\_notebooks/FeynmanRules.m] are listed as follows (\emph{all the momenta are outgoing}):
+            \begin{itemize}
+                \item \texttt{VertexHHH[$p_1$, $\mu$, $\nu$, $p_2$, $\rho$, $\sigma$, $p_3$, $\alpha$, $\beta$]} \\
+                    The triple-graviton vertex in Eq.~\eqref{eq:vertex-hhh}.
+                \item \texttt{VertexSSH[$p_1$, $p_2$, $m$, $\mu$, $\nu$)} \\
+                    The vertex of scalar-scalar-graviton in Eq.~\eqref{eq:vertex-phi-phi-h} or Eq.~\eqref{eq:vertex-varphi-varphi-h}.
+                \item \texttt{VertexSSHH[$p_1$, $p_2$, $m$, $\mu$, $\nu$, $\rho$, $\sigma$]} \\
+                    The vertex of scalar-scalar-graviton-graviton in Eq.~\eqref{eq:vertex-s-s-h-h}.
+                \item \texttt{VertexS1S2S2[]} \\
+                    The vertex of $\phi$-$\varphi$-$\varphi$ in Eq.~\eqref{eq:vertex-phi-varphi-varphi}.
+                \item \texttt{VertexS1S2S2H[$\mu$, $\nu$]} \\
+                    The vertex of $\phi$-$\varphi$-$\varphi$-$h$ in Eq.~\eqref{eq:vertex-phi-varphi-varphi-h}.
+                \item \texttt{PropagatorGraviton[$p$, $\mu$, $\nu$, $\rho$, $\sigma$]} \\
+                    The propagator of graviton in Eq.~\eqref{eq:propagator-graviton}.
+                \item \texttt{PropagatorScalar[$p$, $m$]} \\
+                    The propagator of scalar fields in Eq.~\eqref{eq:propagator-phi} or Eq.~\eqref{eq:propagator-varphi}.
+                \item \texttt{tildeMT[$\mu$, $\nu$, $p$, $r$]} \\
+                    $\bar{\eta}_{\mu\nu}$ in Eq.~\eqref{eq:eta-bar}.
+                \item \texttt{SumPol[$\mu$, $\nu$, $\alpha$, $\beta$, $p$, $r$]} \\
+                    The sum of polarization tensors in Eq.~\eqref{eq:sum-pol}.
+            \end{itemize}
+        
     \section{Amplitudes}
 
-        With the Feynman rules we have derived, we could calculate the amplitudes for the processes of interest, where the package \textsc{FeynCalc} \cite{Mertig:1990an, Shtabovenko:2016sxi, Shtabovenko:2020gxv, Shtabovenko:2023idz} is applied.
-        In \githubsrc[Mathematica\_notebooks/FeynmanRules.m], the generated Feynman rules are automatically loaded for the calculation of the amplitudes in the following sections.
-
-        \paragraph{Important Note:}
-        In \textsc{FeynCalc}, the metric signature is $-2$ instead of $+2$.
-        The Feynman rules derived in the previous section should be modified accordingly:
-        \begin{minted}[gobble=12, breaklines]{mathematica}
-            outputRule = {
-                ph1[a_] -> FV[ph1, a], ph2[a_] -> FV[ph2, a], ph3[a_] -> FV[ph3, a],
-
-                p\[Phi]1[a_] -> FV[p\[Phi]1, a], p\[Phi]2[a_] -> FV[p\[Phi]2, a],
-
-                p\[CurlyPhi]1[a_] -> FV[p\[CurlyPhi]1, a],
-                p\[CurlyPhi]2[a_] -> FV[p\[CurlyPhi]2, a],
-
-                \[Eta][a_, b_] -> -MT[a, b], FV[p1_, a_] FV[p2_, -a_] -> -SP[p1, p2]
-            } // HoldForm;
-        \end{minted}
+        After collecting all the Feynman rules, we could calculate the amplitudes for the processes of interest.
 
         \subsection{\boldmath \texorpdfstring{$\phi \to \varphi \varphi$}{inflaton → reheaton + reheaton}}
 
@@ -486,7 +540,8 @@
             \begin{minted}[gobble=16, breaklines]{mathematica}
                 magicRule = {FV[k1, _] -> 0, FV[k2, _] -> 0, MT[\[Mu], \[Nu]] -> 0, 
                     MT[\[Rho], \[Sigma]] -> 0, MT[\[Mu]C, \[Nu]C] -> 0, 
-                    MT[\[Rho]C, \[Sigma]C] -> 0, FV[p2, \[Mu]_] -> -FV[p1, \[Mu]]};
+                    MT[\[Rho]C, \[Sigma]C] -> 0, FV[p2, \[Mu]_] -> -FV[p1, \[Mu]]
+                };
             \end{minted}
             Therefore, the amplitudes are simplified to
             \begin{align}
@@ -650,8 +705,10 @@
             \end{equation}
             which is also consistent with Eq.~(A.13) of Ref.~\cite{Xu:2024fjl}.
 
-    % \section*{Acknowledgments}
-    % \addcontentsline{toc}{section}{Acknowledgments}
+    \section*{Acknowledgments}
+    \addcontentsline{toc}{section}{Acknowledgments}
+    
+        This note in \faGithub~\githubsrc{} is the supplementary material for the paper \TBD[arXiv:2503.xxxxx], so I would like to thank my collaborators Nicolás Bernal, Yong XU, and Xun-Jie XU for useful discussion on this work.
 
     \clearpage
     \appendix
