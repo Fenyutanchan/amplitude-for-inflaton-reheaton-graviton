@@ -19,8 +19,8 @@ See [note](./note/main.pdf).
 
 ## Repository Structure
 
-- [Mathematica_notebooks](./Mathematica_notebooks): The archive of the repoducible Mathematica notebooks.
-- [note](./note): The ${\rm LaTeX}$ source of the main note.
+- [Mathematica_notebooks](./Mathematica_notebooks): The directory of the repoducible Mathematica notebooks.
+- [note](./note): The ${\rm \LaTeX}$ source directory of the main note.
 
 ## License
 

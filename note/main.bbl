@@ -595,6 +595,41 @@
       \verb 2211.16513
       \endverb
     \endentry
+    \entry{Xu:2024fjl}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=90812e2aac1e3fb393dfd7663b4eefe1}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{90812e2aac1e3fb393dfd7663b4eefe1}
+      \strng{fullhash}{90812e2aac1e3fb393dfd7663b4eefe1}
+      \strng{fullhashraw}{90812e2aac1e3fb393dfd7663b4eefe1}
+      \strng{bibnamehash}{90812e2aac1e3fb393dfd7663b4eefe1}
+      \strng{authorbibnamehash}{90812e2aac1e3fb393dfd7663b4eefe1}
+      \strng{authornamehash}{90812e2aac1e3fb393dfd7663b4eefe1}
+      \strng{authorfullhash}{90812e2aac1e3fb393dfd7663b4eefe1}
+      \strng{authorfullhashraw}{90812e2aac1e3fb393dfd7663b4eefe1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JHEP}
+      \field{title}{{Ultra-high frequency gravitational waves from scattering, Bremsstrahlung and decay during reheating}}
+      \field{volume}{10}
+      \field{year}{2024}
+      \field{pages}{174}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/JHEP10(2024)174
+      \endverb
+      \verb{eprint}
+      \verb 2407.03256
+      \endverb
+    \endentry
     \entry{Carroll:2004st}{book}{}{}
       \name{author}{1}{}{%
         {{hash=a21efd7d6f43a778b4bd8bd5cf50c950}{%

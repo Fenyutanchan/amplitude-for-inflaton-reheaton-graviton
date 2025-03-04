@@ -26,7 +26,6 @@
     linkcolor=blue,
     urlcolor=magenta
 ]{hyperref}
-\usepackage[color=violet]{attachfile2}
 % \usepackage{mathrsfs}
 % \usepackage{mathtools}
 \usepackage{pgfplots}
@@ -481,7 +480,7 @@
             The corresponding amplitudes are calculated in \githubsrc[Mathematica\_notebooks/phi-phi-to-h-h.nb].
             Since the $P_{\mu\nu, \rho\sigma}$ is TT as shown in Eqs.~\eqref{eq:transverse-condition} and \eqref{eq:traceless-condition}, we could make the replacements to simplify the calculations, which are given by
             \begin{equation}
-                    k_i \to 0, \qquad p_2 \to -p_1, \qquad \eta_{\mu\nu} \to 0, \qquad \eta_{\rho\sigma} \to 0.
+                k_i \to 0, \qquad p_2 \to -p_1, \qquad \eta_{\mu\nu} \to 0, \qquad \eta_{\rho\sigma} \to 0.
             \end{equation}
             In the \textsc{Wolfram Mathematica} notebook, the \texttt{magicRule} consists of the replacements, which reads
             \begin{minted}[gobble=16, breaklines]{mathematica}
@@ -491,8 +490,8 @@
             \end{minted}
             Therefore, the amplitudes are simplified to
             \begin{align}
-                \iM[t] & \simeq -\frac{4 \ii \kappa^2}{t - m_\phi^2} p_1^\mu p_1^\nu p_1^\rho p_1^\sigma, \\
-                \iM[u] & \simeq -\frac{4 \ii \kappa^2}{u - m_\phi^2} p_1^\mu p_1^\nu p_1^\rho p_1^\sigma, \\
+                \iM[t] & \simeq -\frac{4 \ii \kappa^2}{t - m_\phi^2} p_1^\mu p_1^\nu p_1^\rho p_1^\sigma \varepsilon_{\mu\nu} \varepsilon_{\rho\sigma}, \\
+                \iM[u] & \simeq -\frac{4 \ii \kappa^2}{u - m_\phi^2} p_1^\mu p_1^\nu p_1^\rho p_1^\sigma \varepsilon_{\mu\nu} \varepsilon_{\rho\sigma}, \\
                 \iM[s] & \simeq \cdots, \\
                 \iM[4] & \simeq \cdots,
             \end{align}
@@ -522,7 +521,11 @@
                 \Msqr[4] & = 32 \kappa^4 m_\phi^4, \\
                 \calM_s \calM_4^* + \calM_4 \calM_s^* & = -48 \kappa^4 m_\phi^4,
             \end{align}
-            which are consistent with Eq.~(A3) of Ref.~\cite{Choi:2024ilx}.
+            and the sum is then
+            \begin{equation}
+                \sumMsqr[\phi + \phi \to h + h] = 2 \kappa^4 m_\phi^4.
+            \end{equation}
+            These results are consistent with Eq.~(A3) of Ref.~\cite{Choi:2024ilx}.
 
             In the UR limit, we have $m_\phi \to 0$, which leads to
             \begin{equation}
@@ -530,6 +533,126 @@
             \end{equation}
             which is consistent with Eq.~(25) of Ref.~\cite{Ghiglieri:2022rfp}\footnote{Notice that $\kappa = \MPl^{-1}$ in this note, while $\kappa = 2 \MPl^{-1}$ in Ref.~\cite{Ghiglieri:2022rfp}.}.
     
+        \subsection{\boldmath \texorpdfstring{\boldmath $\phi + \varphi \to h_{\mu\nu} + \varphi$}{ϕ + φ → h\_{µν} + φ}}
+        
+            For the process of $\phi(p_\phi) + \varphi(p_\varphi) \to h_{\mu\nu}(k_h) + \varphi(k_\varphi)$, the corresponding Feynman diagrams are shown in Fig.~\ref{fig:phi-varphi-to-h-varphi}.
+
+            \begin{figure}[h]
+                \centering
+                \begin{tikzpicture}
+                    \begin{feynhand}
+                        \vertex (ϕ) at (-1.5, 1) {$\phi$};
+                        \vertex (φ1) at (-1.5, -1) {$\varphi$};
+                        \vertex (ϕ-ϕ-h) at (0, 1);
+                        \vertex (ϕ-φ-φ) at (0, -1);
+                        \vertex (h) at (1.5, 1) {$h_{\mu\nu}$};
+                        \vertex (φ2) at (1.5, -1) {$\varphi$};
+
+                        \propag [mom=$p_\phi$] (ϕ) to (ϕ-ϕ-h);
+                        \propag [sca, mom=$p_\varphi$] (φ1) to (ϕ-φ-φ);
+                        \propag [mom=$p_\phi - k_h$] (ϕ-ϕ-h) to [edge label'=$\phi$] (ϕ-φ-φ);
+                        \propag [graviton] (ϕ-ϕ-h) to (h);
+                        \propag [opacity=0, mom=$k_h$] (ϕ-ϕ-h) to (h);
+                        \propag [sca, mom=$k_\varphi$] (ϕ-φ-φ) to (φ2);
+                    \end{feynhand}
+                \end{tikzpicture}
+                \begin{tikzpicture}
+                    \begin{feynhand}
+                        \vertex (ϕ) at (-1.5, 1) {$\phi$};
+                        \vertex (φ1) at (-1.5, -1) {$\varphi$};
+                        \vertex (φ-φ-h) at (0, -1);
+                        \vertex (ϕ-φ-φ) at (0, 1);
+                        \vertex (h) at (1.5, -1) {$h_{\mu\nu}$};
+                        \vertex (φ2) at (1.5, 1) {$\varphi$};
+
+                        \propag [mom=$p_\phi$] (ϕ) to (ϕ-φ-φ);
+                        \propag [sca, mom=$p_\varphi$] (φ1) to (φ-φ-h);
+                        \propag [sca, mom=$p_\phi - k_\varphi$] (ϕ-φ-φ) to [edge label'=$\varphi$] (φ-φ-h);
+                        \propag [graviton] (φ-φ-h) to (h);
+                        \propag [opacity=0, mom=$k_h$] (φ-φ-h) to (h);
+                        \propag [sca, mom=$k_\varphi$] (ϕ-φ-φ) to (φ2);
+                    \end{feynhand}
+                \end{tikzpicture}
+                \begin{tikzpicture}
+                    \begin{feynhand}
+                        \vertex (ϕ) at (-1.5, 1) {$\phi$};
+                        \vertex (φ1) at (-1.5, -1) {$\varphi$};
+                        \vertex (ϕ-φ-φ) at (-.5, 0);
+                        \vertex (φ-φ-h) at (.5, 0);
+                        \vertex (h) at (1.5, 1) {$h_{\mu\nu}$};
+                        \vertex (φ2) at (1.5, -1) {$\varphi$};
+
+                        \propag [mom=$p_\phi$] (ϕ) to (ϕ-φ-φ);
+                        \propag [sca, mom=$p_\varphi$] (φ1) to (ϕ-φ-φ);
+                        \propag [sca, mom'=$p_\phi + p_\varphi$] (ϕ-φ-φ) to [edge label=$\varphi$] (φ-φ-h);
+                        \propag [graviton] (φ-φ-h) to (h);
+                        \propag [opacity=0, mom=$k_h$] (φ-φ-h) to (h);
+                        \propag [sca, mom=$k_\varphi$] (φ-φ-h) to (φ2);
+                    \end{feynhand}
+                \end{tikzpicture}
+                \begin{tikzpicture}
+                    \begin{feynhand}
+                        \vertex (ϕ) at (-1.5, 1) {$\phi$};
+                        \vertex (φ1) at (-1.5, -1) {$\varphi$};
+                        \vertex (ϕ-φ-φ-h) at (0, 0);
+                        \vertex (h) at (1.5, 1) {$h_{\mu\nu}$};
+                        \vertex (φ2) at (1.5, -1) {$\varphi$};
+
+                        \propag [mom=$p_\phi$] (ϕ) to (ϕ-φ-φ-h);
+                        \propag [sca, mom=$p_\varphi$] (φ1) to (ϕ-φ-φ-h);
+                        \propag [graviton] (ϕ-φ-φ-h) to (h);
+                        \propag [opacity=0, mom'=$k_h$] (ϕ-φ-φ-h) to (h);
+                        \propag [sca, mom'=$k_\varphi$] (ϕ-φ-φ-h) to (φ2);
+                    \end{feynhand}
+                \end{tikzpicture}
+                \caption{Feynman diagrams for $\phi(p_\phi) + \varphi(p_\varphi) \to h_{\mu\nu}(k_h) + \varphi(k_\varphi)$: $t$-, $u$-, $s$-, and contact channels.}
+                \label{fig:phi-varphi-to-h-varphi}
+            \end{figure}
+
+            The corresponding amplitudes are calculated in \githubsrc[Mathematica\_notebooks/phi-varphi-to-h-varphi.nb].
+            Also following the condition that the $P_{\mu\nu, \rho\sigma}$ is TT as shown in Eqs.~\eqref{eq:transverse-condition} and \eqref{eq:traceless-condition}, we could make the replacements to simplify the calculations, which are given by
+            \begin{equation}
+                k_h \to 0, \qquad k_\varphi \to p_\phi + p_\varphi, \qquad \eta_{\mu\nu} \to 0,
+            \end{equation}
+            or equivalently in the \textsc{Wolfram Mathematica} notebook,
+            \begin{minted}[gobble=16, breaklines]{mathematica}
+                magicRule = {
+                    FV[kh, _] -> 0, MT[\[Mu], \[Nu]] -> 0, 
+                    MT[\[Mu]C, \[Nu]C] -> 0, 
+                    FV[k\[CurlyPhi], \[Mu]_] -> FCE@ScalarProductExpand@FV[p\[Phi] + p\[CurlyPhi], \[Mu]]
+                };
+            \end{minted}
+            Therefore, the amplitudes are simplified to
+            \begin{align}
+                \iM[t] & \simeq -\frac{2 \ii \kappa \lambda}{t - m_\phi^2} p_\phi^\mu p_\phi^\nu \varepsilon_{\mu\nu}, \\
+                \iM[u] & \simeq -\frac{2 \ii \kappa \lambda}{u - m_\varphi^2} p_\varphi^\mu p_\varphi^\nu \varepsilon_{\mu\nu} , \\
+                \iM[s] & \simeq -\frac{2 \ii \kappa \lambda}{s - m_\varphi^2} k_\varphi^\mu k_\varphi^\nu \varepsilon_{\mu\nu}, \\
+                \iM[4] & = \ii \kappa \lambda \eta^{\mu\nu} \varepsilon_{\mu\nu} \simeq 0,
+            \end{align}
+            which are consistent with Eqs.~(A.9)--(A.12) of Ref.~\cite{Xu:2024fjl}.
+            The norm squared of the amplitudes with the summation over the spins/helicities of all external particles is then
+            \begin{equation}
+                \sumMsqr[\phi + \varphi \to h + \varphi] = \frac{2 \lambda^2}{\MPl^2} \frac{\qty(m_\phi^4 m_\varphi^2 - m_\phi^2 t \qty(s + m_\varphi^2) + t \qty[s t + \qty(s - m_\varphi^2)^2])^2}{\qty(s - m_\varphi^2)^2 \qty(t - m_\phi^2)^2 \qty(m_\phi^2 + m_\varphi^2 - s - t)^2},
+            \end{equation}
+            where $\kappa = \MPl^{-1}$ is used.
+            
+            Considering the NR limit of $\phi$ and UR limit of $\varphi$, \ie, $p_\phi \simeq \qty(m_\phi, \vb{0})$ and $m_\varphi \to 0$, we will have
+            \begin{equation}
+                \begin{aligned}
+                    s & \simeq m_\phi^2 + m_\varphi^2 + 2 m_\phi E_\varphi, \\
+                    & \simeq m_\phi^2 + 2 m_\phi E_\varphi, \\
+                    t & \simeq m_\phi^2 - 2 m_\phi E_h.
+                \end{aligned}
+            \end{equation}
+            Then, the sum of the norm squared of the amplitudes is simplified to
+            \begin{equation}
+                \sumMsqr[\phi + \varphi \to h + \varphi] = \frac{2 \lambda^2}{\MPl^2} \qty(1 - \frac{m_\phi}{2 E_h})^2,
+            \end{equation}
+            which is also consistent with Eq.~(A.13) of Ref.~\cite{Xu:2024fjl}.
+
+    % \section*{Acknowledgments}
+    % \addcontentsline{toc}{section}{Acknowledgments}
+
     \clearpage
     \appendix
     \numberwithin{equation}{section}
@@ -595,7 +718,6 @@
             \end{equation}
             where $c$ is the speed of light in vacuum, $\hbar$ is the reduced Planck constant, $\kB$ is the Boltzmann constant, and $\varepsilon_0$ is the vacuum permittivity.
             We have the vacuum magnetic permeability $\mu_0 = 1$ as well in the natural unit systems since $c^2 = (\varepsilon_0 \mu_0)^{-1}$.
-            
 
             The Planck mass is defined as
             \begin{equation}
