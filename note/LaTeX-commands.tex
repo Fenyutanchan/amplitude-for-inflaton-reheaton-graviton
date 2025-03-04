@@ -4,6 +4,8 @@
 \newcommand{\ie}{\textit{i.e.}}
 \newcommand{\license}{\footnote{This note © 2024 by \href{https://github.com/Fenyutanchan}{Quan-feng WU} is licensed under \href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{CC BY-NC-ND 4.0}. \faCreativeCommons \faCreativeCommonsBy \faCreativeCommonsNc \faCreativeCommonsNd}}
 
+\DeclareDocumentCommand{\githubsrc}{o}{\IfNoValueTF{#1}{\url{https://github.com/Fenyutanchan/amplitude-for-inflaton-reheaton-graviton.git}}{\href{https://github.com/Fenyutanchan/amplitude-for-inflaton-reheaton-graviton/blob/master/#1}{\texttt{#1}}}}
+
 \DeclareDocumentCommand{\TBA}{o}{\IfNoValueTF{#1}{{\color{red} TBA.}}{{\color{red} TBA: #1}}}
 \DeclareDocumentCommand{\TBD}{o}{\IfNoValueTF{#1}{{\color{red} TBD.}}{{\color{red} TBD: #1}}}
 

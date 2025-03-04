@@ -1,2 +1,51 @@
 \newcommand{\ee}{\mathrm{e}}
 \newcommand{\ii}{\mathrm{i}}
+
+\DeclareDocumentCommand{\twopi}{o}{\IfNoValueTF{#1}{2 \pi}{\qty(2 \pi)^{#1}}}
+\DeclareDocumentCommand{\diracdelta}{o}{\IfNoValueTF{#1}{\delta}{\delta^{(#1)}}}
+\DeclareDocumentCommand{\twopidelta}{om}{\IfNoValueTF{#1}{\twopi[] \diracdelta}{\twopi[#1] \diracdelta[#1]} \qty(#2)}
+
+\DeclareDocumentCommand{\iM}{o}{\IfNoValueTF{#1}{\ii \calM}{\ii \calM_{#1}}}
+\DeclareDocumentCommand{\Msqr}{o}{\IfNoValueTF{#1}{\overline{\abs{\calM}^2}}{\overline{\abs{\calM_{#1}}^2}}}
+
+
+% \newcommand{\iM}{\ii \calM}
+% \newcommand{\Msqr}{\overline{\abs{\calM}^2}}
+
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\diag}{diag}
+
+\newcommand{\GF}{G_\mathrm{F}}
+\newcommand{\GN}{G_\mathrm{N}}
+\newcommand{\MPl}{M_\mathrm{Pl}}
+\newcommand{\kB}{k_\mathrm{B}}
+\newcommand{\mPl}{m_\mathrm{Pl}}
+\newcommand{\tPl}{t_\mathrm{Pl}}
+
+\newcommand{\eV}{\mathrm{eV}}
+\newcommand{\gram}{\mathrm{g}}
+\newcommand{\meter}{\mathrm{m}}
+\newcommand{\second}{\mathrm{s}}
+
+\newcommand{\centi}{\mathrm{c}}
+\newcommand{\kilo}{\mathrm{k}}
+\newcommand{\mega}{\mathrm{M}}
+\newcommand{\giga}{\mathrm{G}}
+\newcommand{\tera}{\mathrm{T}}
+
+\newcommand{\MeV}{\mega\eV}
+\newcommand{\GeV}{\giga\eV}
+\newcommand{\TeV}{\tera\eV}
+\newcommand{\cm}{\centi\meter}
+\newcommand{\kg}{\kilo\gram}
+
+\newcommand{\tento}[1]{10^{#1}}
+\newcommand{\timestento}[1]{\times \tento{#1}}
+
+\newcommand{\tildedp}[1]{\widetilde{\dd{#1}}}
+
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calM}{\mathcal{M}}
+\newcommand{\frakm}{\mathfrak{m}}
+\newcommand{\rmp}{\mathrm{p}}
+\newcommand{\rmk}{\mathrm{k}}

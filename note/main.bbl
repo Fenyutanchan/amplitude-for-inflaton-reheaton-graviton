@@ -16,5 +16,565 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Wu:2025_amp-inflaton-reheaton-graviton}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=59f2c296b94a6a70b73fe94fcfdd75a7}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Quan-feng},
+           giveni={Q\bibinithyphendelim f\bibinitperiod}}}%
+      }
+      \strng{namehash}{59f2c296b94a6a70b73fe94fcfdd75a7}
+      \strng{fullhash}{59f2c296b94a6a70b73fe94fcfdd75a7}
+      \strng{fullhashraw}{59f2c296b94a6a70b73fe94fcfdd75a7}
+      \strng{bibnamehash}{59f2c296b94a6a70b73fe94fcfdd75a7}
+      \strng{authorbibnamehash}{59f2c296b94a6a70b73fe94fcfdd75a7}
+      \strng{authornamehash}{59f2c296b94a6a70b73fe94fcfdd75a7}
+      \strng{authorfullhash}{59f2c296b94a6a70b73fe94fcfdd75a7}
+      \strng{authorfullhashraw}{59f2c296b94a6a70b73fe94fcfdd75a7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Amplitude Calculation of Inflaton, Reheaton, and Graviton}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://github.com/Fenyutanchan/amplitude-for-inflaton-reheaton-graviton.git
+      \endverb
+      \verb{url}
+      \verb https://github.com/Fenyutanchan/amplitude-for-inflaton-reheaton-graviton.git
+      \endverb
+    \endentry
+    \entry{Basile:2024oms}{book}{}{}
+      \name{author}{6}{}{%
+        {{hash=d365d334c7d191027fae64568415c50f}{%
+           family={Basile},
+           familyi={B\bibinitperiod},
+           given={Ivano},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ecddf89811b4ba1b3a37b60204f61b35}{%
+           family={Buoninfante},
+           familyi={B\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=19d59376af9f2f295618ddbd9c8f9c68}{%
+           family={Di\bibnamedelima Filippo},
+           familyi={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=4f34baa382764f38461e96036ddb7ee2}{%
+           family={Knorr},
+           familyi={K\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=fceeba1e7f647059bb8c489f5059aa30}{%
+           family={Platania},
+           familyi={P\bibinitperiod},
+           given={Alessia},
+           giveni={A\bibinitperiod}}}%
+        {{hash=fb4a1d266cbc59d178d014675b0908fa}{%
+           family={Tokareva},
+           familyi={T\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7dadad45ab2a6a2d87cabe71783bfb15}
+      \strng{fullhash}{c603a8042a9457635f9545f529fd04fb}
+      \strng{fullhashraw}{c603a8042a9457635f9545f529fd04fb}
+      \strng{bibnamehash}{7dadad45ab2a6a2d87cabe71783bfb15}
+      \strng{authorbibnamehash}{7dadad45ab2a6a2d87cabe71783bfb15}
+      \strng{authornamehash}{7dadad45ab2a6a2d87cabe71783bfb15}
+      \strng{authorfullhash}{c603a8042a9457635f9545f529fd04fb}
+      \strng{authorfullhashraw}{c603a8042a9457635f9545f529fd04fb}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-th}
+      \field{eprinttype}{arXiv}
+      \field{month}{12}
+      \field{title}{{Lectures in Quantum Gravity}}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2412.08690
+      \endverb
+    \endentry
+    \entry{Tokareva:2024_graviton}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=fb4a1d266cbc59d178d014675b0908fa}{%
+           family={Tokareva},
+           familyi={T\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb4a1d266cbc59d178d014675b0908fa}
+      \strng{fullhash}{fb4a1d266cbc59d178d014675b0908fa}
+      \strng{fullhashraw}{fb4a1d266cbc59d178d014675b0908fa}
+      \strng{bibnamehash}{fb4a1d266cbc59d178d014675b0908fa}
+      \strng{authorbibnamehash}{fb4a1d266cbc59d178d014675b0908fa}
+      \strng{authornamehash}{fb4a1d266cbc59d178d014675b0908fa}
+      \strng{authorfullhash}{fb4a1d266cbc59d178d014675b0908fa}
+      \strng{authorfullhashraw}{fb4a1d266cbc59d178d014675b0908fa}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Graviton Scattering Amplitudes on xAct}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://github.com/tokareva90/Graviton-scattering-amplitudes-on-xAct
+      \endverb
+      \verb{url}
+      \verb https://github.com/tokareva90/Graviton-scattering-amplitudes-on-xAct
+      \endverb
+    \endentry
+    \entry{Brizuela:2008ra}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=6ffd8b8030fcf0a6ca999aebad2069dd}{%
+           family={Brizuela},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3edf3939ac80f91a3e0ded13c30f3072}{%
+           family={Martin-Garcia},
+           familyi={M\bibinithyphendelim G\bibinitperiod},
+           given={Jose\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=95321c986113cfd258048f772320dff8}{%
+           family={Mena\bibnamedelima Marugan},
+           familyi={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Guillermo\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{48bd107b3c3bb800484998c4dbd66f82}
+      \strng{fullhash}{48bd107b3c3bb800484998c4dbd66f82}
+      \strng{fullhashraw}{48bd107b3c3bb800484998c4dbd66f82}
+      \strng{bibnamehash}{48bd107b3c3bb800484998c4dbd66f82}
+      \strng{authorbibnamehash}{48bd107b3c3bb800484998c4dbd66f82}
+      \strng{authornamehash}{48bd107b3c3bb800484998c4dbd66f82}
+      \strng{authorfullhash}{48bd107b3c3bb800484998c4dbd66f82}
+      \strng{authorfullhashraw}{48bd107b3c3bb800484998c4dbd66f82}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{gr-qc}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Gen. Rel. Grav.}
+      \field{title}{{xPert: Computer algebra for metric perturbation theory}}
+      \field{volume}{41}
+      \field{year}{2009}
+      \field{pages}{2415\bibrangedash 2431}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/s10714-009-0773-2
+      \endverb
+      \verb{eprint}
+      \verb 0807.0824
+      \endverb
+    \endentry
+    \entry{Nutma:2013zea}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=dde5a8dbd4ae15233432e1fb57fbdbd0}{%
+           family={Nutma},
+           familyi={N\bibinitperiod},
+           given={Teake},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{dde5a8dbd4ae15233432e1fb57fbdbd0}
+      \strng{fullhash}{dde5a8dbd4ae15233432e1fb57fbdbd0}
+      \strng{fullhashraw}{dde5a8dbd4ae15233432e1fb57fbdbd0}
+      \strng{bibnamehash}{dde5a8dbd4ae15233432e1fb57fbdbd0}
+      \strng{authorbibnamehash}{dde5a8dbd4ae15233432e1fb57fbdbd0}
+      \strng{authornamehash}{dde5a8dbd4ae15233432e1fb57fbdbd0}
+      \strng{authorfullhash}{dde5a8dbd4ae15233432e1fb57fbdbd0}
+      \strng{authorfullhashraw}{dde5a8dbd4ae15233432e1fb57fbdbd0}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.SC}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Comput. Phys. Commun.}
+      \field{title}{{xTras : A field-theory inspired xAct package for mathematica}}
+      \field{volume}{185}
+      \field{year}{2014}
+      \field{pages}{1719\bibrangedash 1738}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1016/j.cpc.2014.02.006
+      \endverb
+      \verb{eprint}
+      \verb 1308.3493
+      \endverb
+    \endentry
+    \entry{Srednicki:2007qs}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=014a9157f76d955fe1036f53453000c3}{%
+           family={Srednicki},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{014a9157f76d955fe1036f53453000c3}
+      \strng{fullhash}{014a9157f76d955fe1036f53453000c3}
+      \strng{fullhashraw}{014a9157f76d955fe1036f53453000c3}
+      \strng{bibnamehash}{014a9157f76d955fe1036f53453000c3}
+      \strng{authorbibnamehash}{014a9157f76d955fe1036f53453000c3}
+      \strng{authornamehash}{014a9157f76d955fe1036f53453000c3}
+      \strng{authorfullhash}{014a9157f76d955fe1036f53453000c3}
+      \strng{authorfullhashraw}{014a9157f76d955fe1036f53453000c3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-521-86449-7, 978-0-511-26720-8}
+      \field{month}{1}
+      \field{title}{{Quantum field theory}}
+      \field{year}{2007}
+      \verb{doi}
+      \verb 10.1017/CBO9780511813917
+      \endverb
+    \endentry
+    \entry{Barman:2023ymn}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=886259ed7ffb6bc0feaea69a65f48e51}{%
+           family={Barman},
+           familyi={B\bibinitperiod},
+           given={Basabendu},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4a480bafeef0d561887ce71c1f78ad56}{%
+           family={Bernal},
+           familyi={B\bibinitperiod},
+           given={Nicolás},
+           giveni={N\bibinitperiod}}}%
+        {{hash=90812e2aac1e3fb393dfd7663b4eefe1}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=81e9af6e340fa03ebb3afbcc0c2e8fa6}{%
+           family={Zapata},
+           familyi={Z\bibinitperiod},
+           given={Óscar},
+           giveni={Ó\bibinitperiod}}}%
+      }
+      \strng{namehash}{29b00761669916dbe791f06280230e4b}
+      \strng{fullhash}{0d319354a60b5f9e1505a1ef9796cce7}
+      \strng{fullhashraw}{0d319354a60b5f9e1505a1ef9796cce7}
+      \strng{bibnamehash}{29b00761669916dbe791f06280230e4b}
+      \strng{authorbibnamehash}{29b00761669916dbe791f06280230e4b}
+      \strng{authornamehash}{29b00761669916dbe791f06280230e4b}
+      \strng{authorfullhash}{0d319354a60b5f9e1505a1ef9796cce7}
+      \strng{authorfullhashraw}{0d319354a60b5f9e1505a1ef9796cce7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{JCAP}
+      \field{title}{{Gravitational wave from graviton Bremsstrahlung during reheating}}
+      \field{volume}{05}
+      \field{year}{2023}
+      \field{pages}{019}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1475-7516/2023/05/019
+      \endverb
+      \verb{eprint}
+      \verb 2301.11345
+      \endverb
+    \endentry
+    \entry{Mertig:1990an}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=42b1ab1b23a6fe6f67ac14a2026d4000}{%
+           family={Mertig},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a91c51dceaf03dbec52a6d863fbe2044}{%
+           family={Bohm},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7ae89435eb9d6807c583ea23f58c42c6}{%
+           family={Denner},
+           familyi={D\bibinitperiod},
+           given={Ansgar},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{cdc411a9a6c1884d39734c8be8f23ef2}
+      \strng{fullhash}{cdc411a9a6c1884d39734c8be8f23ef2}
+      \strng{fullhashraw}{cdc411a9a6c1884d39734c8be8f23ef2}
+      \strng{bibnamehash}{cdc411a9a6c1884d39734c8be8f23ef2}
+      \strng{authorbibnamehash}{cdc411a9a6c1884d39734c8be8f23ef2}
+      \strng{authornamehash}{cdc411a9a6c1884d39734c8be8f23ef2}
+      \strng{authorfullhash}{cdc411a9a6c1884d39734c8be8f23ef2}
+      \strng{authorfullhashraw}{cdc411a9a6c1884d39734c8be8f23ef2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comput. Phys. Commun.}
+      \field{title}{{FEYN CALC: Computer algebraic calculation of Feynman amplitudes}}
+      \field{volume}{64}
+      \field{year}{1991}
+      \field{pages}{345\bibrangedash 359}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1016/0010-4655(91)90130-D
+      \endverb
+    \endentry
+    \entry{Shtabovenko:2016sxi}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=16002bc7bc5dc9751e35560a89c27ddf}{%
+           family={Shtabovenko},
+           familyi={S\bibinitperiod},
+           given={Vladyslav},
+           giveni={V\bibinitperiod}}}%
+        {{hash=bbf65951d3c4c8b712eab3b722550044}{%
+           family={Mertig},
+           familyi={M\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6084d5e99eed5e5fb6776664df0475ed}{%
+           family={Orellana},
+           familyi={O\bibinitperiod},
+           given={Frederik},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{fullhash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{fullhashraw}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{bibnamehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authorbibnamehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authornamehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authorfullhash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authorfullhashraw}{e2387958d27104aaaf2b27776c5af2c8}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Comput. Phys. Commun.}
+      \field{title}{{New Developments in FeynCalc 9.0}}
+      \field{volume}{207}
+      \field{year}{2016}
+      \field{pages}{432\bibrangedash 444}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.cpc.2016.06.008
+      \endverb
+      \verb{eprint}
+      \verb 1601.01167
+      \endverb
+    \endentry
+    \entry{Shtabovenko:2020gxv}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=16002bc7bc5dc9751e35560a89c27ddf}{%
+           family={Shtabovenko},
+           familyi={S\bibinitperiod},
+           given={Vladyslav},
+           giveni={V\bibinitperiod}}}%
+        {{hash=bbf65951d3c4c8b712eab3b722550044}{%
+           family={Mertig},
+           familyi={M\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6084d5e99eed5e5fb6776664df0475ed}{%
+           family={Orellana},
+           familyi={O\bibinitperiod},
+           given={Frederik},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{fullhash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{fullhashraw}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{bibnamehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authorbibnamehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authornamehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authorfullhash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authorfullhashraw}{e2387958d27104aaaf2b27776c5af2c8}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Comput. Phys. Commun.}
+      \field{title}{{FeynCalc 9.3: New features and improvements}}
+      \field{volume}{256}
+      \field{year}{2020}
+      \field{pages}{107478}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cpc.2020.107478
+      \endverb
+      \verb{eprint}
+      \verb 2001.04407
+      \endverb
+    \endentry
+    \entry{Shtabovenko:2023idz}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=16002bc7bc5dc9751e35560a89c27ddf}{%
+           family={Shtabovenko},
+           familyi={S\bibinitperiod},
+           given={Vladyslav},
+           giveni={V\bibinitperiod}}}%
+        {{hash=bbf65951d3c4c8b712eab3b722550044}{%
+           family={Mertig},
+           familyi={M\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6084d5e99eed5e5fb6776664df0475ed}{%
+           family={Orellana},
+           familyi={O\bibinitperiod},
+           given={Frederik},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{fullhash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{fullhashraw}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{bibnamehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authorbibnamehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authornamehash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authorfullhash}{e2387958d27104aaaf2b27776c5af2c8}
+      \strng{authorfullhashraw}{e2387958d27104aaaf2b27776c5af2c8}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Comput. Phys. Commun.}
+      \field{title}{{FeynCalc 10: Do multiloop integrals dream of computer codes?}}
+      \field{volume}{306}
+      \field{year}{2025}
+      \field{pages}{109357}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.cpc.2024.109357
+      \endverb
+      \verb{eprint}
+      \verb 2312.14089
+      \endverb
+    \endentry
+    \entry{Carroll:2004st}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=a21efd7d6f43a778b4bd8bd5cf50c950}{%
+           family={Carroll},
+           familyi={C\bibinitperiod},
+           given={Sean\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{fullhash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{fullhashraw}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{bibnamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authorbibnamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authornamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authorfullhash}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \strng{authorfullhashraw}{a21efd7d6f43a778b4bd8bd5cf50c950}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-8053-8732-2, 978-1-108-48839-6, 978-1-108-77555-7}
+      \field{month}{7}
+      \field{title}{{Spacetime and Geometry}: {An Introduction to General Relativity}}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1017/9781108770385
+      \endverb
+    \endentry
+    \entry{ParticleDataGroup:2024cfk}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=25b6d239864c97a90ec8be94cdea417d}{%
+           family={Navas},
+           familyi={N\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{fullhash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{fullhashraw}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{bibnamehash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{authorbibnamehash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{authornamehash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{authorfullhash}{9e02c695d9a57f6e8669b26d9be3e077}
+      \strng{authorfullhashraw}{9e02c695d9a57f6e8669b26d9be3e077}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Phys. Rev. D}
+      \field{number}{3}
+      \field{title}{{Review of particle physics}}
+      \field{volume}{110}
+      \field{year}{2024}
+      \field{pages}{030001}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevD.110.030001
+      \endverb
+    \endentry
+    \entry{Misner:1973prb}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=05c5e0e62bd36ef32b9a719149851fdc}{%
+           family={Misner},
+           familyi={M\bibinitperiod},
+           given={Charles\bibnamedelima W.},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=161eb603b5ac15963a0177da9ede0eda}{%
+           family={Thorne},
+           familyi={T\bibinitperiod},
+           given={K.\bibnamedelimi S.},
+           giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=bfe4c9173d526c3ddf3af872befcb5d0}{%
+           family={Wheeler},
+           familyi={W\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Francisco}%
+      }
+      \list{publisher}{1}{%
+        {W. H. Freeman}%
+      }
+      \strng{namehash}{228d49a2d58db482b18fd494a6d97fc3}
+      \strng{fullhash}{228d49a2d58db482b18fd494a6d97fc3}
+      \strng{fullhashraw}{228d49a2d58db482b18fd494a6d97fc3}
+      \strng{bibnamehash}{228d49a2d58db482b18fd494a6d97fc3}
+      \strng{authorbibnamehash}{228d49a2d58db482b18fd494a6d97fc3}
+      \strng{authornamehash}{228d49a2d58db482b18fd494a6d97fc3}
+      \strng{authorfullhash}{228d49a2d58db482b18fd494a6d97fc3}
+      \strng{authorfullhashraw}{228d49a2d58db482b18fd494a6d97fc3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-7167-0344-0, 978-0-691-17779-3}
+      \field{title}{{Gravitation}}
+      \field{year}{1973}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

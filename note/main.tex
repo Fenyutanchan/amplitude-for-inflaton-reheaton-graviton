@@ -44,7 +44,7 @@
 \author{Quan-feng WU\email{wuquanfeng@ihep.ac.cn}}
 \affil{
     Institute of High Energy Physics, Chinese Academy of Sciences, \\
-    Beijing 100049, China
+    Beijing 100049, CHINA
 }
 \date{\today\license}
 
@@ -52,17 +52,403 @@
     \maketitle
 
     \begin{abstract}
-        In this Git repository\footnote{\url{https://github.com/Fenyutanchan/amplitude-for-inflaton-reheaton-graviton}}, the amplitude calculations for the inflaton, reheaton, and graviton are presented.
-        The technical details are presented in this note, and the reproducible \textsc{Wolfram Mathematica} notebooks are available in the directory of \href{URL}{\texttt{Mathematica\_notebooks/}}\footnote{All of the \textsc{Wolfram Mathematica} notebooks are licensed under the MIT License.}.
-        This note and this Git repository are the supplementary materials for the paper \TBD[arXiv:2503:xxxxx].
-        If it is helpful for your research, please cite the paper\footnote{It would be greatly appreciated if the reader cite this Git repository explicitly as well (see \href{https://github.com/Fenyutanchan/amplitude-for-inflaton-reheaton-graviton/blob/master/README.md}{README.md} for the citation information).}.
+        In this Git repository \cite{Wu:2025_amp-inflaton-reheaton-graviton}, the amplitude calculations for the inflaton, reheaton, and graviton are presented, including the reproducible \textsc{Wolfram Mathematica} notebooks\footnote{All of the \textsc{Wolfram Mathematica} notebooks are licensed under the MIT License.} in the directory \githubsrc[Mathematica\_notebooks/] and the technical details in this note.
+        This Git repository is the supplementary material for the paper \TBD[arXiv:2503:xxxxx].
+        If it is helpful for your research, please cite the paper\footnote{It would be greatly appreciated if the reader cite this Git repository explicitly as well (see \githubsrc[README.md] for the citation information).}.
     \end{abstract}
     \noindent\hrulefill
 
     \tableofcontents
     \clearpage
 
+    \section{Introduction}
+
+        This note is inspired by Refs.~\cite{Basile:2024oms} and \cite{Tokareva:2024_graviton}.
+        We consider the inflaton $\phi$, the reheaton $\varphi$ as two real scalar fields, and separate the spacetime metric into two parts as \cite[Eq.~(2.13)]{Basile:2024oms}
+        \begin{equation}
+            g_{\mu\nu}(x) = \eta_{\mu\nu} + 2 \kappa h_{\mu\nu}(x),
+        \end{equation}
+        where $\eta_{\mu\nu} = \diag(-1, 1, 1, 1)$ is the Minkowski metric, $\kappa = \sqrt{8 \pi \GN}$ is the perturbation parameter, and $h_{\mu\nu}(x)$ is a metric fluctuation such that $\kappa \abs{h_{\mu\nu}} \ll 1$.
+
+        \paragraph{Important Note:}
+        This note adopts the convention of $(+ + +)$ instead of $(- - +)$ in \TBD[arXiv:2503:xxxxx].
+        Please check Appendix~\ref{app:convention} for details.
+
+    \section{Lagrangians and Feynman Rules}
+
+        The corresponding action is given by
+        \begin{equation}
+            S = \int \dd[4]{x} \sqrt{-g} \qty[\frac{R}{2 \kappa^2} + \calL_\phi + \calL_\varphi + \calL_{\phi\varphi^2}],
+        \end{equation}
+        where $R$ is the Ricci scalar, and the Lagrangians are given by
+        \begin{align}
+            \calL_\phi & = -\frac{1}{2} g^{\mu\nu} \qty(\nabla_\mu \phi) \nabla_\nu \phi - \frac{1}{2} m_\phi^2 \phi^2, \\
+            \calL_\varphi & = -\frac{1}{2} g^{\mu\nu} \qty(\nabla_\mu \varphi) \nabla_\nu \varphi - \frac{1}{2} m_\varphi^2 \varphi^2, \\
+            \calL_{\phi\varphi^2} & = \frac{\lambda}{2!} \phi \varphi^2.
+        \end{align}
+        Usually, the inflaton $\phi$ is considered heavier than the reheaton $\varphi$, \ie, $m_\phi > m_\varphi$.
+
+        \subsection{Vertices}
+
+            All of the vertices are derived in \githubsrc[Mathematica\_notebooks/Feynman-rules-for-Vertices-via-xAct.nb], which is the reproducible \textsc{Wolfram Mathematica} notebook.
+            The \textsc{xAct} bundle\footnote{\url{https://www.xAct.es}} (including \textsc{xPert} \cite{Brizuela:2008ra} and \textsc{xTras} \cite{Nutma:2013zea}) is applied to derive the Feynman rules for vertices.
+
+            \subsubsection{Pure Graviton Vertex}
+                For the pure graviton vertex, the Feynman rule could be derived the Einstein-Hilbert action of
+                \begin{equation}
+                    S_\mathrm{EH} = \frac{1}{2 \kappa^2} \int \dd[4]{x} \sqrt{-g} R,
+                \end{equation}
+                In this note, we only derive the triple-graviton vertex, where we use the package \textsc{xPert} to expand the perturbation of the Einstein-Hilbert action in $\order{\kappa}$ as\footnote{Notice that there are $\kappa^2$ terms in the denominator of the Lagrangian.}
+                \begin{verbatim}
+                    ExpandPerturbation[Perturbed[LEH, 3] - Perturbed[LEH, 2]]
+                \end{verbatim}
+                with $\texttt{LEH} = \sqrt{-g} \calL_{EH} = \sqrt{-g} R / (2 \kappa^2)$.
+                After some manipulations, we obtain the Feynman rule for the triple-graviton vertex as
+                \begin{equation}
+                    \begin{tikzpicture}[baseline=(o)]
+                        \begin{feynhand}
+                            \vertex (o) at (0, 0);
+                            \vertex (h1) at (-1, 1) {$h_{\mu\nu}$};
+                            \vertex (h2) at (1, 1) {$h_{\rho\sigma}$};
+                            \vertex (h3) at (0, -1) {$h_{\alpha\beta}$};
+
+                            \propag [graviton] (o) to (h1);
+                            \propag [mom = $p_1$, opacity=0] (o) to (h1);
+                            \propag [graviton] (o) to (h2);
+                            \propag [mom = $p_2$, opacity=0] (o) to (h2);
+                            \propag [graviton] (o) to (h3);
+                            \propag [mom = $p_3$, opacity=0] (o) to (h3);
+                        \end{feynhand}
+                    \end{tikzpicture} = \ii V_{{(\mu\nu)(\rho\sigma)(\alpha\beta)}}(p_1, p_2, p_3).
+                \end{equation}
+                The corresponding expression is too lengthy to be presented here, but it could be found in the reproducible Mathematica notebook \githubsrc[Mathematica\_notebooks/Feynman-rules-for-Vertices-via-xAct.nb].
+
+            \subsubsection{\boldmath Vertices of \texorpdfstring{$\phi$-$\phi$-$h$}{ϕ-ϕ-h} and \texorpdfstring{$\varphi$-$\varphi$-$h$}{φ-φ-h}}
+
+                For the vertices of $\phi$-$\phi$-$h$ and $\varphi$-$\varphi$-$h$, the action of
+                \begin{equation}
+                    S_{\phi + \varphi} = \int \dd[4]{x} \sqrt{-g} \qty[\calL_\phi + \calL_\varphi]
+                \end{equation}
+                is considered.
+                Same as the pure graviton vertex, the Feynman rules for the vertices of $\phi$-$\phi$-$h$ and $\varphi$-$\varphi$-$h$ are derived via the package \textsc{xPert}, which are given by
+                \begin{equation}
+                    \begin{tikzpicture}[baseline=(o)]
+                        \begin{feynhand}
+                            \vertex (o) at (0, 0);
+                            \vertex (phi1) at (-1, -1) {$\phi$};
+                            \vertex (phi2) at (1, -1) {$\phi$};
+                            \vertex (h) at (0, 1) {$h_{\mu\nu}$};
+
+                            \propag [scalar, mom=\textcolor{black}{$p_1$}, blue] (o) to (phi1);
+                            \propag [scalar, mom=\textcolor{black}{$p_2$}, blue] (o) to (phi2);
+                            \propag [graviton] (o) to (h);
+                        \end{feynhand}
+                    \end{tikzpicture} = -\ii \kappa \qty[p_1^\mu p_2^\nu + p_1^\nu p_2^\mu - \eta^{\mu\nu} \qty(p_1 \cdot p_2 - m_\phi^2)],
+                \end{equation}
+                and
+                \begin{equation}
+                    \begin{tikzpicture}[baseline=(o)]
+                        \begin{feynhand}
+                            \vertex (o) at (0, 0);
+                            \vertex (varphi1) at (-1, -1) {$\varphi$};
+                            \vertex (varphi2) at (1, -1) {$\varphi$};
+                            \vertex (h) at (0, 1) {$h_{\mu\nu}$};
+
+                            \propag [scalar, mom=\textcolor{black}{$p_1$}, red] (o) to (varphi1);
+                            \propag [scalar, mom=\textcolor{black}{$p_2$}, red] (o) to (varphi2);
+                            \propag [graviton] (o) to (h);
+                        \end{feynhand}
+                    \end{tikzpicture} = -\ii \kappa \qty[p_1^\mu p_2^\nu + p_1^\nu p_2^\mu - \eta^{\mu\nu} \qty(p_1 \cdot p_2 - m_\varphi^2)].
+                \end{equation}
+
+            \subsubsection{\boldmath Vertices of \texorpdfstring{$\phi$-$\varphi$-$\varphi$}{ϕ-φ-φ}(-\texorpdfstring{$h$}{h})}
+
+                For the vertices of $\phi$-$\varphi$-$\varphi$(-$h$), the action of
+                \begin{equation}
+                    S_{\phi\varphi^2} = \int \dd[4]{x} \sqrt{-g} \calL_{\phi\varphi^2}
+                \end{equation}
+                is considered.
+                Same as the previous vertices, the Feynman rules for the vertices of $\phi$-$\varphi$-$\varphi$(-$h$) are derived via the package \textsc{xPert}, which are given by
+                \begin{equation}
+                    \begin{tikzpicture}[baseline=(o)]
+                        \begin{feynhand}
+                            \vertex (o) at (0, 0);
+                            \vertex (varphi1) at (-1, -1) {$\varphi$};
+                            \vertex (varphi2) at (1, -1) {$\varphi$};
+                            \vertex (phi) at (0, 1) {$\phi$};
+
+                            \propag [scalar, blue] (o) to (phi);
+                            \propag [scalar, red] (o) to (varphi1);
+                            \propag [scalar, red] (o) to (varphi2);
+                        \end{feynhand}
+                    \end{tikzpicture} = \ii \lambda,
+                \end{equation}
+                and
+                \begin{equation}
+                    \begin{tikzpicture}[baseline=(o)]
+                        \begin{feynhand}
+                            \vertex (o) at (0, 0);
+                            \vertex (varphi1) at (-1, 1) {$\varphi$};
+                            \vertex (varphi2) at (-1, -1) {$\varphi$};
+                            \vertex (phi) at (1, 1) {$\phi$};
+                            \vertex (h) at (1, -1) {$h_{\mu\nu}$};
+
+                            \propag [scalar, red] (o) to (varphi1);
+                            \propag [scalar, red] (o) to (varphi2);
+                            \propag [scalar, blue] (o) to (phi);
+                            \propag [graviton] (o) to (h);
+                        \end{feynhand}
+                    \end{tikzpicture} = \ii \kappa \lambda \eta_{\mu\nu}.
+                \end{equation}
+
+        \subsection{Propagators and External Legs}
+            
+            In this note, we do not consider the derivation of the Feynman rules for the propagators and external legs.
+            For the scalar fields, the propagators are simply given by \cite[Sec.~10]{Srednicki:2007qs}
+            \begin{equation}
+                \begin{tikzpicture}[baseline=(phi1)]
+                    \begin{feynhand}
+                        \vertex (phi1) at (0, 0);
+                        \vertex (phi1-1) at (-.2, .1);
+                        \vertex (phi1-2) at (-.2, -.1);
+                        \vertex (phi2) at (2, 0);
+                        \vertex (phi2-1) at (2.2, .1);
+                        \vertex (phi2-2) at (2.2, -.1);
+
+                        \propag [scalar, mom=\textcolor{black}{$p$}, blue] (phi1) to (phi2);
+
+                        \draw (phi1-1) -- (phi1) -- (phi1-2);
+                        \draw (phi2-1) -- (phi2) -- (phi2-2);
+                    \end{feynhand}
+                \end{tikzpicture} = \frac{-\ii}{p^2 + m_\phi^2 - \ii 0^+},
+            \end{equation}
+            and
+            \begin{equation}
+                \begin{tikzpicture}[baseline=(phi1)]
+                    \begin{feynhand}
+                        \vertex (phi1) at (0, 0);
+                        \vertex (phi1-1) at (-.2, .1);
+                        \vertex (phi1-2) at (-.2, -.1);
+                        \vertex (phi2) at (2, 0);
+                        \vertex (phi2-1) at (2.2, .1);
+                        \vertex (phi2-2) at (2.2, -.1);
+
+                        \propag [scalar, mom=\textcolor{black}{$p$}, red] (phi1) to (phi2);
+
+                        \draw (phi1-1) -- (phi1) -- (phi1-2);
+                        \draw (phi2-1) -- (phi2) -- (phi2-2);
+                    \end{feynhand}
+                \end{tikzpicture} = \frac{-\ii}{p^2 + m_\varphi^2 - \ii 0^+}.
+            \end{equation}
+            The external legs for scalar fields are always $1$ \cite[Sec.~10]{Srednicki:2007qs}.
+
+            For the graviton, the propagator in the \emph{Feynman gauge} is given by \cite[Eq.~(2.81)]{Basile:2024oms}
+            \begin{equation}
+                \begin{tikzpicture}[baseline=(h1)]
+                    \begin{feynhand}
+                        \vertex (h1) at (0, 0);
+                        \vertex (h1-1) at (-.2, .1);
+                        \vertex (h1-2) at (-.2, -.1);
+                        \vertex (h2) at (2, 0);
+                        \vertex (h2-1) at (2.2, .1);
+                        \vertex (h2-2) at (2.2, -.1);
+
+                        \vertex (h1text) at (-.5, 0) {$\mu\nu$};
+                        \vertex (h2text) at (2.5, 0) {$\rho\sigma$};
+
+                        \propag [graviton] (h1) to (h2);
+                        \propag [mom=$p$, opacity=0] (h1) to (h2);
+
+                        \draw (h1-1) -- (h1) -- (h1-2);
+                        \draw (h2-1) -- (h2) -- (h2-2);
+                    \end{feynhand}
+                \end{tikzpicture} = \frac{1}{2} \frac{-\ii}{p^2 - \ii 0^+} \qty(\eta_{\mu\rho} \eta_{\nu\sigma} + \eta_{\mu\sigma} \eta_{\nu\rho} - \eta_{\mu\nu} \eta_{\rho\sigma}).
+            \end{equation}
+            The external legs for the graviton are given by
+            \begin{equation}
+                \begin{tikzpicture}[baseline=(h1)]
+                    \begin{feynhand}
+                        \vertex (h1) at (0, 0);
+                        \vertex (h1-1) at (-.2, .1);
+                        \vertex (h1-2) at (-.2, -.1);
+                        \vertex (h2) at (2, 0) {$\mu\nu$};
+
+
+                        \propag [graviton] (h1) to (h2);
+                        \propag [mom=$p$, opacity=0] (h1) to (h2);
+
+                        \draw (h1-1) -- (h1) -- (h1-2);
+                    \end{feynhand}
+                \end{tikzpicture} = \varepsilon_{\mu\nu}(\vb{p}, \pm 2),
+            \end{equation}
+            and
+            \begin{equation}
+                \begin{tikzpicture}[baseline=(h1)]
+                    \begin{feynhand}
+                        \vertex (h1) at (0, 0) {$\mu\nu$};
+                        \vertex (h2) at (2, 0);
+                        \vertex (h2-1) at (2.2, .1);
+                        \vertex (h2-2) at (2.2, -.1);
+
+                        \propag [graviton] (h1) to (h2);
+                        \propag [mom=$p$, opacity=0] (h1) to (h2);
+
+                        \draw (h2-1) -- (h2) -- (h2-2);
+                    \end{feynhand}
+                \end{tikzpicture} = \varepsilon_{\mu\nu}^*(\vb{p}, \pm 2),
+            \end{equation}
+            where $\varepsilon_{\mu\nu}(\vb{p}, \pm 2)$ and $\varepsilon_{\mu\nu}^*(\vb{p}, \pm 2)$ are the polarization tensors of the graviton ($\pm 2$ for helicities).
+            We do not discuss the details of the polarization tensors here but refer to Ref.~\cite[Sec.~2.2]{Basile:2024oms} for details.
+            However, we are interested in the summation over the helicities as \cite[Eq.~(A.6)]{Barman:2023ymn}
+            \begin{equation}
+                \sum_{h = \pm 2} \varepsilon_{\mu\nu}(\vb{p}, h) \varepsilon_{\rho\sigma}^*(\vb{p}, h) = \frac{1}{2} \qty(\bar{\eta}_{\mu\rho} \bar{\eta}_{\nu\sigma} + \bar{\eta}_{\mu\sigma} \bar{\eta}_{\nu\rho} - \bar{\eta}_{\mu\nu} \bar{\eta}_{\rho\sigma}),
+            \end{equation}
+            where
+            \begin{equation}
+                \bar{\eta}_{\mu\nu} = \eta_{\mu\nu} - \frac{p_\mu r_\nu + r_\mu p_\nu}{p \cdot r}
+            \end{equation}
+            with $r^\mu$ being an arbitrary null vector for reference.
+
+    \section{Amplitudes}
+
+        With the Feynman rules we have derived, we could calculate the amplitudes for the processes of interest, where the package \textsc{FeynCalc} \cite{Mertig:1990an, Shtabovenko:2016sxi, Shtabovenko:2020gxv, Shtabovenko:2023idz} is applied.
+
+        \paragraph{Important Note:}
+        In \textsc{FeynCalc}, the metric signature is $-2$ instead of $+2$.
+        The Feynman rules derived in the previous section should be modified accordingly:
+        \begin{verbatim}
+            outputRule = {
+                ph1[a_] -> FV[ph1, a], ph2[a_] -> FV[ph2, a],
+                ph3[a_] -> FV[ph3, a], p\[Phi]1[a_] -> FV[p\[Phi]1, a], 
+                p\[Phi]2[a_] -> FV[p\[Phi]2, a], 
+                p\[CurlyPhi]1[a_] -> FV[p\[CurlyPhi]1, a], 
+                p\[CurlyPhi]2[a_] -> FV[p\[CurlyPhi]2, a], \[Eta][a_, b_] -> -MT[a, b], 
+                FV[p1_, a_] FV[p2_, -a_] -> -SP[p1, p2]
+            } // HoldForm
+        \end{verbatim}
+
+        
     
+    \clearpage
+    \appendix
+    \numberwithin{equation}{section}
+
+    \section{Conventions}\label{app:convention}
+
+        Here, we list the conventions used in this note.
+
+        \subsection{Spacetime: Metric and Curvature}
+        
+            We use the Greek indices $\mu, \nu, \ldots$ for spacetime indices and the Latin indices $i, j, \ldots$ for spatial indices.
+            For $D$-dimensional spacetime, we have the spacetime indices run from $0$ to $D - 1$, and the spatial indices run from $1$ to $D - 1$, where $0$ is the time index and other indices are spatial indices.
+            Usually, we consider $D = 4$ spacetime dimensions.
+
+            In four-dimensional spacetime, the metric signature is chosen to be $+2$, \eg,
+            \begin{equation}
+                \eta_{\mu\nu} = \mqty(\dmat[0]{-1, +1, +1, +1})
+            \end{equation}
+            for the Minkowski metric.
+
+            The covariant and contravariant vectors in spacetime are denoted as $A_\mu$ and $A^\mu$, respectively.
+            They are related by the metric $g_{\mu\nu}$ as
+            \begin{equation}
+                A_\mu \equiv g_{\mu\nu} A^\nu \qand A^\mu \equiv g^{\mu\nu} A_\nu,
+            \end{equation}
+            where $g^{\mu\nu}$ is the inverse of $g_{\mu\nu}$, \ie,
+            \begin{equation}
+                g^{\mu\nu} g_{\nu\rho} = \delta\indices{^\mu_\rho} \qand g_{\mu\nu} g^{\nu\rho} = \delta\indices{_\mu^\rho}.
+            \end{equation}
+            Here we adopt the Einstein summation convention, where indices appearing twice with one as a superscript and the other as a subscript are summed over.
+            Without specification, the Einstein summation convention is applied throughout this note.
+
+            The Riemman curvature tensor for the spacetime is defined as \cite[Eq.~(3.4)]{Carroll:2004st}
+            \begin{equation}
+                R\indices{^\rho_{\sigma\mu\nu}} := \partial_\mu \Gamma\indices{^\rho_{\nu\sigma}} - \partial_\nu \Gamma\indices{^\rho_{\mu\sigma}} + \Gamma\indices{^\rho_{\mu\lambda}} \Gamma\indices{^\lambda_{\nu\sigma}} - \Gamma\indices{^\rho_{\nu\lambda}} \Gamma\indices{^\lambda_{\mu\sigma}},
+            \end{equation}
+            where $\Gamma\indices{^\rho_{\mu\nu}}$ is the Christoffel symbol defined as \cite[Eq.~(3.1)]{Carroll:2004st}
+            \begin{equation}
+                \Gamma\indices{^\rho_{\mu\nu}} := \frac{1}{2} g^{\rho\sigma} \qty(\partial_\mu g_{\nu\sigma} + \partial_\nu g_{\mu\sigma} - \partial_\sigma g_{\mu\nu}).
+            \end{equation}
+            The Ricci tensor and scalar curvature are then given by \cite[Eqs.~(3.144) and (3.146)]{Carroll:2004st}
+            \begin{align}
+                R_{\mu\nu} & := R\indices{^\rho_{\mu\rho\nu}}, \\
+                R & := g^{\mu\nu} R_{\mu\nu}.
+            \end{align}
+            The Einstein tensor is defined as \cite[Eq.~(3.151)]{Carroll:2004st}
+            \begin{equation}
+                G_{\mu\nu} := R_{\mu\nu} - \frac{1}{2} g_{\mu\nu} R,
+            \end{equation}
+            and the Einstein field equation is then \cite[Eq.~(4.100)]{Carroll:2004st}
+            \begin{equation}
+                G_{\mu\nu} + \Lambda g_{\mu\nu} = \kappa^2 T_{\mu\nu},
+            \end{equation}
+            where $\Lambda$ is the cosmological constant, $\kappa^2 = 8 \pi \GN$ \cite[Eq.~(2.1)]{Basile:2024oms} with $\GN = 6.70883(15) \timestento{-39} ~ \GeV^{-2}$ being the Newton's constant \cite{ParticleDataGroup:2024cfk}, and $T_{\mu\nu}$ is the energy-momentum tensor.
+
+            This convention is also adopted in MTW's \textit{Gravitation} \cite{Misner:1973prb}, which is known as $(+ + +)$ convention.
+
+        \subsection{Natural Units and (reduced) Planck Mass}
+
+            The natural unit systems are given by 
+            \begin{equation}
+                c = \hbar = \kB = \varepsilon_0 = 1,
+            \end{equation}
+            where $c$ is the speed of light in vacuum, $\hbar$ is the reduced Planck constant, $\kB$ is the Boltzmann constant, and $\varepsilon_0$ is the vacuum permittivity.
+            We have the vacuum magnetic permeability $\mu_0 = 1$ as well in the natural unit systems since $c^2 = (\varepsilon_0 \mu_0)^{-1}$.
+            
+
+            The Planck mass is defined as
+            \begin{equation}
+                \mPl := \frac{1}{\sqrt{\GN}},
+            \end{equation}
+            In this note, the reduced Planck mass is widely used, which is defined as
+            \begin{equation}
+                \MPl := \frac{1}{\sqrt{8 \pi \GN}} \equiv \frac{\mPl}{\sqrt{8 \pi}}.
+                \label{eq:reduced-Planck-mass}
+            \end{equation}
+
+        \subsection{Kinematics}
+
+            The four-momentum $p$ is defined as $p^\mu = (E, \vb{p})$, where $E$ is the energy and $\vb{p}$ is the spatial momentum.
+            The on-shell condition is given by $p^2 = -m^2$ for metric signature $+2$.
+
+            In the $n \to m$ scattering process $p_1 + p_2 + \cdots + p_n \to k_1 + k_2 + \cdots + k_m$ with $p_i$'s and $k_j$'s the four-momenta of the incoming and outgoing particles, respectively, the four-momentum conservation is given by
+            \begin{equation}
+                p_1 + p_2 + \cdots + p_n = k_1 + k_2 + \cdots + k_m.
+            \end{equation}
+            We denote the masses of the particles as $m_i$'s for $p_i$'s and $\frakm_j$'s for $k_j$'s, \ie,
+            \begin{equation}
+                \left\{
+                    \begin{aligned}
+                        p_i^2 & = -m_i^2, \\
+                        k_j^2 & = -\frakm_j^2.
+                    \end{aligned}
+                \right.
+            \end{equation}
+            
+            The Lorentz-invairant phase space element for the four-momentum $p$ is defined as
+            \begin{equation}
+                \tildedp{p} := \frac{\dd[3]{\vb{p}}}{\twopi[3] 2 E},
+            \end{equation}
+            where $p = \qty(E, \vb{p})$ and $p^2 = -E^2 + \vb{p}^2 = -m^2$.
+
+            For the $2 \to 2$ scattering process $p_1 + p_2 \to k_1 + k_2$, the Mandelstam variables are defined as
+            \begin{equation}
+                \begin{aligned}
+                    s & := -(p_1 + p_2)^2 \equiv -(k_1 + k_2)^2, \\
+                    t & := -(p_1 - k_1)^2 \equiv -(p_2 - k_2)^2, \\
+                    u & := -(p_1 - k_2)^2 \equiv -(p_2 - k_1)^2.
+                \end{aligned}
+                \label{eq:s-t-u}
+            \end{equation}
+            For the $1 \to 3$ scattering process $p_1 \to k_1 + k_2 + k_3$, the Mandelstam variables are defined as
+            \begin{equation}
+                \begin{aligned}
+                    s & := -(p_1 - k_3)^2 \equiv -(k_1 + k_2)^2, \\
+                    t & := -(p_1 - k_1)^2 \equiv -(k_2 + k_3)^2, \\
+                    u & := -(p_1 - k_2)^2 \equiv -(k_1 + k_3)^2.
+                \end{aligned}
+            \end{equation}
+
     \clearpage
     \printbibliography[heading=bibintoc]
 \end{document}
