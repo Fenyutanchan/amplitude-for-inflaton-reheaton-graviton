@@ -48,6 +48,55 @@
       \verb https://github.com/Fenyutanchan/amplitude-for-inflaton-reheaton-graviton.git
       \endverb
     \endentry
+    \entry{Bernal:2025_prethermalized-gravitational-waves}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=4a480bafeef0d561887ce71c1f78ad56}{%
+           family={Bernal},
+           familyi={B\bibinitperiod},
+           given={Nicolás},
+           giveni={N\bibinitperiod}}}%
+        {{hash=59f2c296b94a6a70b73fe94fcfdd75a7}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Quan-feng},
+           giveni={Q\bibinithyphendelim f\bibinitperiod}}}%
+        {{hash=5458899c837135b6df531273b873f958}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xun-Jie},
+           giveni={X\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=90812e2aac1e3fb393dfd7663b4eefe1}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{f90d4314fd00b5cf36fe18c7a26ee07d}
+      \strng{fullhash}{c53dbfd65a4eceba116cf91a3d5e55b6}
+      \strng{fullhashraw}{c53dbfd65a4eceba116cf91a3d5e55b6}
+      \strng{bibnamehash}{f90d4314fd00b5cf36fe18c7a26ee07d}
+      \strng{authorbibnamehash}{f90d4314fd00b5cf36fe18c7a26ee07d}
+      \strng{authornamehash}{f90d4314fd00b5cf36fe18c7a26ee07d}
+      \strng{authorfullhash}{c53dbfd65a4eceba116cf91a3d5e55b6}
+      \strng{authorfullhashraw}{c53dbfd65a4eceba116cf91a3d5e55b6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{Pre-thermalized Gravitational Waves}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2503.10756
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2503.10756
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2503.10756
+      \endverb
+    \endentry
     \entry{Basile:2024oms}{book}{}{}
       \name{author}{6}{}{%
         {{hash=d365d334c7d191027fae64568415c50f}{%
@@ -89,8 +138,8 @@
       \strng{authornamehash}{7dadad45ab2a6a2d87cabe71783bfb15}
       \strng{authorfullhash}{c603a8042a9457635f9545f529fd04fb}
       \strng{authorfullhashraw}{c603a8042a9457635f9545f529fd04fb}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{hep-th}
@@ -118,8 +167,8 @@
       \strng{authornamehash}{fb4a1d266cbc59d178d014675b0908fa}
       \strng{authorfullhash}{fb4a1d266cbc59d178d014675b0908fa}
       \strng{authorfullhashraw}{fb4a1d266cbc59d178d014675b0908fa}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Graviton Scattering Amplitudes on xAct}
@@ -157,8 +206,8 @@
       \strng{authornamehash}{48bd107b3c3bb800484998c4dbd66f82}
       \strng{authorfullhash}{48bd107b3c3bb800484998c4dbd66f82}
       \strng{authorfullhashraw}{48bd107b3c3bb800484998c4dbd66f82}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{gr-qc}
@@ -192,8 +241,8 @@
       \strng{authornamehash}{dde5a8dbd4ae15233432e1fb57fbdbd0}
       \strng{authorfullhash}{dde5a8dbd4ae15233432e1fb57fbdbd0}
       \strng{authorfullhashraw}{dde5a8dbd4ae15233432e1fb57fbdbd0}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.SC}
@@ -230,8 +279,8 @@
       \strng{authornamehash}{014a9157f76d955fe1036f53453000c3}
       \strng{authorfullhash}{014a9157f76d955fe1036f53453000c3}
       \strng{authorfullhashraw}{014a9157f76d955fe1036f53453000c3}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0-521-86449-7, 978-0-511-26720-8}
@@ -611,8 +660,8 @@
       \strng{authornamehash}{90812e2aac1e3fb393dfd7663b4eefe1}
       \strng{authorfullhash}{90812e2aac1e3fb393dfd7663b4eefe1}
       \strng{authorfullhashraw}{90812e2aac1e3fb393dfd7663b4eefe1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{hep-ph}
@@ -649,8 +698,8 @@
       \strng{authornamehash}{a21efd7d6f43a778b4bd8bd5cf50c950}
       \strng{authorfullhash}{a21efd7d6f43a778b4bd8bd5cf50c950}
       \strng{authorfullhashraw}{a21efd7d6f43a778b4bd8bd5cf50c950}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0-8053-8732-2, 978-1-108-48839-6, 978-1-108-77555-7}
@@ -693,8 +742,8 @@
       \strng{authornamehash}{228d49a2d58db482b18fd494a6d97fc3}
       \strng{authorfullhash}{228d49a2d58db482b18fd494a6d97fc3}
       \strng{authorfullhashraw}{228d49a2d58db482b18fd494a6d97fc3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0-7167-0344-0, 978-0-691-17779-3}

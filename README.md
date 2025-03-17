@@ -28,9 +28,17 @@ MIT license (see [LICENSE](./LICENSE)) for the repository and CC BY-NC-ND 4.0 li
 
 ## Citation
 
-Please cite the paper of [arXiv:2503.xxxxx](https://arxiv.org/abs/2503.xxxxx) (on [INSPIRE-HEP](https://inspirehep.net/literature/184xxxx)) if you use this code in your research:
+Please cite the paper of [arXiv:2503.10756](https://arxiv.org/abs/2503.10756) <!-- (on [INSPIRE-HEP](https://inspirehep.net/literature/184xxxx)) --> if you use this code in your research (to be updated if the paper is available on INSPIRE-HEP):
 ```bibtex
-TBD
+@misc{Bernal:2025_prethermalized-gravitational-waves,
+      title={Pre-thermalized Gravitational Waves}, 
+      author={Nicolás Bernal and Quan-feng Wu and Xun-Jie Xu and Yong Xu},
+      year={2025},
+      eprint={2503.10756},
+      archivePrefix={arXiv},
+      primaryClass={hep-ph},
+      url={https://arxiv.org/abs/2503.10756}, 
+}
 ```
 
 It would be greatly appreciated if the reader cite this Git repository explicitly as well:
