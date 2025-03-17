@@ -48,7 +48,7 @@
       \verb https://github.com/Fenyutanchan/amplitude-for-inflaton-reheaton-graviton.git
       \endverb
     \endentry
-    \entry{Bernal:2025_prethermalized-gravitational-waves}{misc}{}{}
+    \entry{Bernal:2025lxp}{article}{}{}
       \name{author}{4}{}{%
         {{hash=4a480bafeef0d561887ce71c1f78ad56}{%
            family={Bernal},
@@ -85,16 +85,11 @@
       \field{labeltitlesource}{title}
       \field{eprintclass}{hep-ph}
       \field{eprinttype}{arXiv}
-      \field{title}{Pre-thermalized Gravitational Waves}
+      \field{month}{3}
+      \field{title}{{Pre-thermalized Gravitational Waves}}
       \field{year}{2025}
       \verb{eprint}
       \verb 2503.10756
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/2503.10756
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/2503.10756
       \endverb
     \endentry
     \entry{Basile:2024oms}{book}{}{}

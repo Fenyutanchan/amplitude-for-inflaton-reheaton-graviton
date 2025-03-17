@@ -9,7 +9,7 @@
 
 ## Main Note
 
-See [note](./note/main.pdf).
+See [note](./note/main.pdf) and [arXiv:2503.10756](https://arxiv.org/abs/2503.10756) (on [INSPIRE-HEP](https://inspirehep.net/literature/2900457)).
 
 ## Requirement
 
@@ -28,16 +28,17 @@ MIT license (see [LICENSE](./LICENSE)) for the repository and CC BY-NC-ND 4.0 li
 
 ## Citation
 
-Please cite the paper of [arXiv:2503.10756](https://arxiv.org/abs/2503.10756) <!-- (on [INSPIRE-HEP](https://inspirehep.net/literature/184xxxx)) --> if you use this code in your research (to be updated if the paper is available on INSPIRE-HEP):
+Please cite the paper of [arXiv:2503.10756](https://arxiv.org/abs/2503.10756) (on [INSPIRE-HEP](https://inspirehep.net/literature/2900457)) if you use this code in your research:
 ```bibtex
-@misc{Bernal:2025_prethermalized-gravitational-waves,
-      title={Pre-thermalized Gravitational Waves}, 
-      author={Nicolás Bernal and Quan-feng Wu and Xun-Jie Xu and Yong Xu},
-      year={2025},
-      eprint={2503.10756},
-      archivePrefix={arXiv},
-      primaryClass={hep-ph},
-      url={https://arxiv.org/abs/2503.10756}, 
+@article{Bernal:2025lxp,
+    author = "Bernal, Nicol\'as and Wu, Quan-feng and Xu, Xun-Jie and Xu, Yong",
+    title = "{Pre-thermalized Gravitational Waves}",
+    eprint = "2503.10756",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    reportNumber = "MITP-25-022",
+    month = "3",
+    year = "2025"
 }
 ```
 
